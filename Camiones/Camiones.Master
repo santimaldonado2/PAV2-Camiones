@@ -90,7 +90,7 @@
     </style>
 
     <script src="scripts/jquery-3.1.1.min.js"></script>
-    <script src="scripts/jquery-ui.min.js"></script>    
+    <script src="scripts/jquery-ui.js"></script>    
     <script src="scripts/bootstrap.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
     <link href="Content/bootstrap-theme.css" rel="stylesheet" />
@@ -98,6 +98,7 @@
     <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <script src="scripts/datepicker.js"></script>
+    <script src="scripts/dialog.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </body>
 </html>

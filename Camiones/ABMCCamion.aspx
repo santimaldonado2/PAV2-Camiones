@@ -5,10 +5,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
-
+    
     <div class="row-fluid col-sm-offset-3 col-sm-4">
+        <div id="dialog" title="Mensaje" class="dialog">
+            <p id="Mensaje" runat="server"></p>
+        </div>
         <div class="panel panel-default" id="formulario" runat="server">
-            <div class="panel-body"> 
+            <div class="panel-body">
                 <h2 class="col-sm-9 col-sm-offset-3" id="titulo" runat="server">Formulario Camiones</h2>
                 <div class="row form-group col-md-12">
                     <label for="IdCamion">ID</label>
@@ -46,9 +49,9 @@
                 </div>
             </div>
 
-            <asp:Button ID="Guardar" class="btn btn-info" CausesValidation="true" runat="server" Text="Guardar" OnClick="Guardar_Click" />
-            <asp:Button ID="Eliminar" class="btn  btn-danger" CausesValidation="false" runat="server" Text="Eliminar" OnClick="Eliminar_Click" />
-            <asp:Label ID="Mensaje" runat="server" class="label label-warning" Text=""></asp:Label>
+            <asp:Button ID="Guardar" class="btn btn-info abreDialog" OnClientClick="openDialog()" CausesValidation="true" runat="server" Text="Guardar" OnClick="Guardar_Click" />
+            <asp:Button ID="Eliminar" class="btn  btn-danger abreDialog" OnClientClick="openDialog()" CausesValidation="false" runat="server" Text="Eliminar" OnClick="Eliminar_Click" />
+
             <br />
         </div>
     </div>
@@ -58,14 +61,14 @@
                 <div class="row col-md-12 form-group">
                     <label for="BuscarPatente">Buscar Patente</label>
                     <asp:TextBox ID="BuscarPatente" class="form-control" runat="server"></asp:TextBox>
-                    <asp:Button ID="Buscar" class="btn btn-default" CausesValidation="false" runat="server" Text="Buscar" OnClick="Buscar_Click" />
-                    <asp:Button ID="Crear" class="btn btn-primary" CausesValidation="false" runat="server" Text="Crear" OnClick="Crear_Click" />
+                    <asp:Button ID="Buscar" class="btn btn-default " CausesValidation="false" runat="server" Text="Buscar" OnClick="Buscar_Click" />
+                    <asp:Button ID="Crear" class="btn btn-primary " CausesValidation="false" runat="server" Text="Crear" OnClick="Crear_Click" />
                 </div>
             </div>
             <br />
 
             <div class="table" id="divGrilla" runat="server">
-                <asp:GridView ID="GrillaCamiones" runat="server" Width="341px" style="margin:auto" HorizontalAlign="Center" CellPadding="10" AutoGenerateColumns="False" OnSelectedIndexChanged="GrillaCamiones_SelectedIndexChanged">
+                <asp:GridView ID="GrillaCamiones" runat="server" Width="341px" Style="margin: auto" HorizontalAlign="Center" CellPadding="10" AutoGenerateColumns="False" OnSelectedIndexChanged="GrillaCamiones_SelectedIndexChanged">
                     <Columns>
                         <asp:CommandField SelectText="Seleccionar" ShowSelectButton="True" />
                         <asp:BoundField DataField="Patente" HeaderText="Patente" />
@@ -80,7 +83,7 @@
                     </Columns>
                 </asp:GridView>
             </div>
-            
+
         </div>
     </div>
 

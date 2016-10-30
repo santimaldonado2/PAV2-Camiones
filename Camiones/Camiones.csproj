@@ -115,13 +115,9 @@
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="InformeViajes.aspx" />
-    <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\datepicker.js" />
-    <Content Include="scripts\jquery-1.9.1.js" />
-    <Content Include="scripts\jquery-1.9.1.min.js" />
-    <Content Include="scripts\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -137,8 +133,8 @@
     </Content>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="scripts\dialog.js" />
     <Content Include="scripts\jquery-3.1.1.min.js" />
-    <Content Include="scripts\jquery-ui.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
