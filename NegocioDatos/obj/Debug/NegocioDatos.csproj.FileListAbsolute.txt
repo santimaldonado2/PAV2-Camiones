@@ -1,0 +1,7 @@
+D:\Maldo\Documentos\utn\PAV2\Camiones\NegocioDatos\obj\Debug\NegocioDatos.csprojResolveAssemblyReference.cache
+D:\Maldo\Documentos\utn\PAV2\Camiones\NegocioDatos\bin\Debug\NegocioDatos.dll
+D:\Maldo\Documentos\utn\PAV2\Camiones\NegocioDatos\bin\Debug\NegocioDatos.pdb
+D:\Maldo\Documentos\utn\PAV2\Camiones\NegocioDatos\bin\Debug\Entidades.dll
+D:\Maldo\Documentos\utn\PAV2\Camiones\NegocioDatos\bin\Debug\Entidades.pdb
+D:\Maldo\Documentos\utn\PAV2\Camiones\NegocioDatos\obj\Debug\NegocioDatos.dll
+D:\Maldo\Documentos\utn\PAV2\Camiones\NegocioDatos\obj\Debug\NegocioDatos.pdb

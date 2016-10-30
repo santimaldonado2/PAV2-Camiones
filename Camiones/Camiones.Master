@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Camiones.master.cs" Inherits="Camiones.Camiones" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>ABMC Camion</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse  navbar-static-top" role="navigation">
+        <a class="navbar-brand" runat="server" href="~/Home.aspx">Home</a>
+        <a class="navbar-brand" runat="server" href="~/Logout.aspx">Salir</a>
+
+        <!-- Menu -->
+        <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+            </ul>
+        </div>
+    </nav>
+
+    <form id="form" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                <asp:Menu ID="Menu1" runat="server">
+                    <Items>
+                        <asp:MenuItem Selected="True" Text="Menu" Value="Menu"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <style>
+        .nav {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+            .nav li {
+                float: left;
+                width: 160px;
+                position: relative;
+            }
+
+                .nav li a {
+                    background: #333;
+                    color: #fff;
+                    display: block;
+                    padding: 7px 8px;
+                    text-decoration: none;
+                    border-top: 1px solid #069;
+                }
+
+                    .nav li a:hover {
+                        color: #069;
+                    }
+
+            /*=== submenu ===*/
+
+            .nav ul {
+                display: none;
+                position: absolute;
+                margin-left: 0px;
+                list-style: none;
+                padding: 0px;
+            }
+
+                .nav ul li {
+                    width: 160px;
+                    float: left;
+                }
+
+                .nav ul a {
+                    display: block;
+                    height: 2%;
+                    padding: 7px 8px;
+                    color: #fff;
+                    text-decoration: none;
+                    border-bottom: 1px solid #222;
+                }
+
+                .nav ul li a:hover {
+                    color: #069;
+                }
+    </style>
+
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>    
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="scripts/datepicker.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</body>
+</html>
+
+
+
+
