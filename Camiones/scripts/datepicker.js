@@ -3,5 +3,4 @@
         dateFormat: "dd/mm/yy",
         maxDate:"+0d"
     });
-    
 });

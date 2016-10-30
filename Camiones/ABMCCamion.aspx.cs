@@ -19,7 +19,7 @@ namespace Camiones
             //En este caso es 50(usuario Final)
             if (!GestorSeguridad.TienePermisos((Usuario)Session["user"], permisoMinimoPagina))
             {
-                Session["Pagina"] = "InformeViajes.aspx";
+                Session["Pagina"] = "ABMCCamion.aspx";
                 Response.Redirect("Login.aspx");
             }
                 
@@ -56,11 +56,11 @@ namespace Camiones
                     if (IdCamion.Text != "")
                     {
                         camion.IdCamion = Int32.Parse(IdCamion.Text);
-                        Mensaje.Text = GestorCamiones.modificarCamion(camion);
+                        Mensaje.InnerText = GestorCamiones.modificarCamion(camion);
                     }
                     else
                     {
-                        Mensaje.Text = GestorCamiones.insertarCamion(camion);
+                        Mensaje.InnerText = GestorCamiones.insertarCamion(camion);
                     }
 
                     CargarGrillaCamiones();
@@ -71,11 +71,11 @@ namespace Camiones
                 }
                 catch (Exception ex)
                 {
-                    Mensaje.Text = ex.Message;
+                    Mensaje.InnerText = ex.Message;
                 }       
             }
             else
-                Mensaje.Text = "Datos incorrectos o incompletos!";
+                Mensaje.InnerText = "Datos incorrectos o incompletos!";
 
 
         }
@@ -126,13 +126,16 @@ namespace Camiones
         {
             if (IdCamion.Text != "")
             {
-                Mensaje.Text = GestorCamiones.eliminarCamion(Int32.Parse(IdCamion.Text));
+                Mensaje.InnerText = GestorCamiones.eliminarCamion(Int32.Parse(IdCamion.Text));
                 CargarGrillaCamiones();
             }
             else
-                Mensaje.Text = "Debe seleccionar un camion para eliminar";
+                Mensaje.InnerText = "Debe seleccionar un camion para eliminar";
 
             LimpiarCampos();
+            panel_grilla.Visible = true;
+            formulario.Visible = false;
+
         }
 
         protected bool campos_validos()

@@ -37,9 +37,13 @@ namespace NegocioDatos
             {
                 tran.Rollback();
                 mensaje = ex.Message;
-                if (mensaje.Contains("UQ__Camion__"))
+                if (mensaje.Contains("UK_Camion_patente"))
                 {
                    throw new Exception("La patente que ha ingresado ya se encuentra registrada, modifique los datos y vuelva a intentarlo");
+                }
+                if (mensaje.Contains("UK_Camion_nroVehiculo"))
+                {
+                    throw new Exception("El numero de Vehiculo ya se encuentra registrado, modifique los datos y vuelva a intentarlo");
                 }
                 else
                     throw;                
