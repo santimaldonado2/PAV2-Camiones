@@ -120,6 +120,7 @@ namespace Camiones
             panel_grilla.Visible = false;
             titulo.InnerText = "Modificar Camión";
             Eliminar.Visible = true;
+            Mensaje.InnerText = "";
         }
 
         protected void Eliminar_Click(object sender, EventArgs e)
