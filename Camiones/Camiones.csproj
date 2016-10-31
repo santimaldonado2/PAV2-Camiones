@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ABMCChofer.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -146,6 +147,13 @@
     </Compile>
     <Compile Include="ABMCCamion.aspx.designer.cs">
       <DependentUpon>ABMCCamion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABMCChofer.aspx.cs">
+      <DependentUpon>ABMCChofer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABMCChofer.aspx.designer.cs">
+      <DependentUpon>ABMCChofer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Camiones.Master.cs">
       <DependentUpon>Camiones.Master</DependentUpon>
