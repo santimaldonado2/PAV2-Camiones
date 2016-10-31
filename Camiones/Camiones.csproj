@@ -94,11 +94,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ABMCCliente.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="InformeCobros.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -147,12 +149,26 @@
     <Compile Include="ABMCCamion.aspx.designer.cs">
       <DependentUpon>ABMCCamion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ABMCCliente.aspx.cs">
+      <DependentUpon>ABMCCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABMCCliente.aspx.designer.cs">
+      <DependentUpon>ABMCCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Camiones.Master.cs">
       <DependentUpon>Camiones.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Camiones.Master.designer.cs">
       <DependentUpon>Camiones.Master</DependentUpon>
+    </Compile>
+    <Compile Include="InformeCobros.aspx.cs">
+      <DependentUpon>InformeCobros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InformeCobros.aspx.designer.cs">
+      <DependentUpon>InformeCobros.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Login.aspx.cs">

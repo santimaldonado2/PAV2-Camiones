@@ -42,6 +42,10 @@
   <ItemGroup>
     <Compile Include="Camion.cs" />
     <Compile Include="Chofer.cs" />
+    <Compile Include="Ciudad.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Cobro.cs" />
+    <Compile Include="DTEInformeCobros.cs" />
     <Compile Include="DTEInformeViajes.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
