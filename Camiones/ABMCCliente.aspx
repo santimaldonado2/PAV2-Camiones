@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Camiones.Master" AutoEventWireup="true" CodeBehind="ABMCCliente.aspx.cs" Inherits="Camiones.ABMCCliente" %>
 
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>ABMC Cliente</title>
 </asp:Content>
@@ -21,7 +22,7 @@
                 
                 <div class="row form-group col-md-12">
                     <label for="NombreCliente">Nombre de Cliente</label>
-                    <asp:TextBox ID="NombreCliente" name="NombreCliente" class="form-control" runat="server" MaxLength="10"></asp:TextBox>
+                    <asp:TextBox ID="NombreCliente" name="NombreCliente" class="form-control" runat="server" MaxLength="50"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorNombreCliente" ForeColor="Red" ControlToValidate="NombreCliente" runat="server" ErrorMessage="Ingrese el nombre del cliente"></asp:RequiredFieldValidator>
                 </div>
 

@@ -18,14 +18,14 @@ namespace NegocioDatos
             SqlTransaction tran = cn.BeginTransaction();
             try
             {
-                SqlCommand cmd = GestorConexion.iniciarComando(cn, "SELECT idCiudad,nombreCiudad FROM Ciudad ORDER BY nombreCiudad");
+                SqlCommand cmd = GestorConexion.iniciarComando(cn, "SELECT idCiudad,nombre FROM Ciudad ORDER BY nombre");
                 cmd.Transaction = tran;
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     Ciudad ciudad = new Ciudad();
                     ciudad.IdCiudad = int.Parse(dr["idCiudad"].ToString());
-                   ciudad.NombreCiudad = dr["nombreCiudad"].ToString();
+                   ciudad.NombreCiudad = dr["nombre"].ToString();
 
                     lista.AddLast(ciudad);
                 }

@@ -19,7 +19,7 @@ namespace NegocioDatos
             SqlTransaction tran = cn.BeginTransaction();
             try
             {
-                SqlCommand cmd = GestorConexion.iniciarComando(cn, "INSERT INTO Cliente (nombreCliente,nroCuit,clienteFijo,fechaInscripcion,ciudad) VALUES (@nombreCliente,@nroCuit,@clienteFijo,@fechaInscripcion,@ciudad);select Scope_Identity() as ID");
+                SqlCommand cmd = GestorConexion.iniciarComando(cn, "INSERT INTO Cliente (nombreCliente,nroCuit,clienteFijo,fechaInscripcion,idCiudad) VALUES (@nombreCliente,@nroCuit,@clienteFijo,@fechaInscripcion,@ciudad);select Scope_Identity() as ID");
                 cmd.Parameters.AddWithValue("@nombreCliente", cliente.NombreCliente);
                 cmd.Parameters.AddWithValue("@nroCuit", cliente.NroCuit);
                 cmd.Parameters.AddWithValue("@clienteFijo", (cliente.ClienteFijo) ? 1 : 0);
@@ -65,7 +65,7 @@ namespace NegocioDatos
                                                                             nroCuit = @nroCuit,
                                                                             clienteFijo = @clienteFijo,
                                                                             fechaInscripcion = @fechaInscripcion,
-                                                                            ciudad = @ciudad,
+                                                                            idCiudad = @ciudad
                                                                       WHERE idCliente = @id");
                 cmd.Parameters.AddWithValue("@nombreCliente", cliente.NombreCliente);
                 cmd.Parameters.AddWithValue("@nroCuit", cliente.NroCuit);
@@ -139,16 +139,16 @@ namespace NegocioDatos
                                                                             c.nroCuit,
                                                                             c.clienteFijo,
                                                                             c.fechaInscripcion,
-                                                                            c.ciudad,
-                                                                            u.nombreCiudad
-                                                                      FROM  Cliente c JOIN Ciudad u ON u.idCiudad = c.ciudad ORDER BY fechaIncripcion");
+                                                                            c.idCiudad,
+                                                                            u.nombre
+                                                                      FROM  Cliente c JOIN Ciudad u ON u.idCiudad = c.idCiudad ORDER BY fechaInscripcion");
                 cmd.Transaction = tran;
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     Ciudad ciudad = new Ciudad();
-                    ciudad.IdCiudad = Int32.Parse(dr["ciudad"].ToString());
-                    ciudad.NombreCiudad = dr["nombreCiudad"].ToString();
+                    ciudad.IdCiudad = Int32.Parse(dr["idCiudad"].ToString());
+                    ciudad.NombreCiudad = dr["nombre"].ToString();
 
                     Cliente cliente = new Cliente();
                     cliente.IdCliente = (int)dr["idCliente"];
@@ -187,9 +187,9 @@ namespace NegocioDatos
                                                                             c.nroCuit,
                                                                             c.clienteFijo,
                                                                             c.fechaInscripcion,
-                                                                            c.ciudad,
-                                                                            u.nombreCiudad
-                                                                      FROM  Cliente c JOIN Ciudad u ON u.idCiudad = c.ciudad ORDER BY fechaIncripcion
+                                                                            c.idCiudad,
+                                                                            u.nombre
+                                                                      FROM  Cliente c JOIN Ciudad u ON u.idCiudad = c.idCiudad 
                                                                      WHERE  c.nombreCliente LIKE @nombreCliente");
                 cmd.Transaction = tran;
                 cmd.Parameters.AddWithValue("@nombreCliente", "%" + nombre + "%");
@@ -197,8 +197,8 @@ namespace NegocioDatos
                 while (dr.Read())
                 {
                     Ciudad ciudad = new Ciudad();
-                    ciudad.IdCiudad = Int32.Parse(dr["ciudad"].ToString());
-                    ciudad.NombreCiudad = dr["nombreCiudad"].ToString();
+                    ciudad.IdCiudad = Int32.Parse(dr["idCiudad"].ToString());
+                    ciudad.NombreCiudad = dr["nombre"].ToString();
 
                     Cliente cliente = new Cliente();
                     cliente.IdCliente = (int)dr["idCliente"];
@@ -238,8 +238,9 @@ namespace NegocioDatos
                                                                             c.nroCuit,
                                                                             c.clienteFijo,
                                                                             c.fechaInscripcion,
-                                                                            c.ciudad,
-                                                                      FROM  Cliente c 
+                                                                            c.idCiudad,
+                                                                            u.nombre
+                                                                       FROM  Cliente c JOIN Ciudad u ON u.idCiudad = c.idCiudad 
                                                                      WHERE  c.idCliente = @idCliente");
                 cmd.Transaction = tran;
                 cmd.Parameters.AddWithValue("@idCliente", idCliente);
@@ -247,8 +248,8 @@ namespace NegocioDatos
                 while (dr.Read())
                 {
                     Ciudad ciudad = new Ciudad();
-                    ciudad.IdCiudad = Int32.Parse(dr["ciudad"].ToString());
-                    ciudad.NombreCiudad = dr["nombreCiudad"].ToString();
+                    ciudad.IdCiudad = Int32.Parse(dr["idCiudad"].ToString());
+                    ciudad.NombreCiudad = dr["nombre"].ToString();
 
                     cliente.IdCliente = (int)dr["idCliente"];
                     cliente.NombreCliente = dr["nombreCliente"].ToString();
