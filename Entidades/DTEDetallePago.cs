@@ -16,8 +16,6 @@ namespace Entidades
 
         public DTEDetallePago(DetallePago detalle)
         {
-            this.idDetallePago = detalle.idDetallePago;
-            this.idPago = detalle.Pago.IdPago;
             this.idViaje = detalle.idViaje;
             this.monto = detalle.monto;
             this.descuentoAdelanto = detalle.descuentoAdelanto;

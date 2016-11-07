@@ -23,6 +23,14 @@
                                 <asp:Label ID="lblMontoMax" for="Monto" class="filter-col" Style="margin-right: 0;" runat="server" Text="Y"></asp:Label>
                                 <asp:TextBox ID="Monto_max" min="1" class="form-control number" runat="server"></asp:TextBox>
                             </div>
+                            <label for="FechaMin">Fecha desde</label>
+                    <asp:TextBox ID="FechaMin" class="form-control datepicker" runat="server"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidatorFechaDesde" ForeColor="Red" runat="server" ControlToValidate="FechaMin" EnableTheming="True" ErrorMessage="Ingrese una fecha válida con el formato DD/MM/YYYY" SetFocusOnError="False" ValidationExpression="^(((((0[1-9])|(1\d)|(2[0-8]))\/((0[1-9])|(1[0-2])))|((31\/((0[13578])|(1[02])))|((29|30)\/((0[1,3-9])|(1[0-2])))))\/((20[0-9][0-9])|(19[0-9][0-9])))|((29\/02\/(19|20)(([02468][048])|([13579][26]))))$ "></asp:RegularExpressionValidator>
+                    
+                            <label for="FechaMax">Fecha hasta</label>
+                    <asp:TextBox ID="FechaMax" class="form-control datepicker" runat="server"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidatorFechaHasta" ForeColor="Red" runat="server" ControlToValidate="FechaMax" EnableTheming="True" ErrorMessage="Ingrese una fecha válida con el formato DD/MM/YYYY" SetFocusOnError="False" ValidationExpression="^(((((0[1-9])|(1\d)|(2[0-8]))\/((0[1-9])|(1[0-2])))|((31\/((0[13578])|(1[02])))|((29|30)\/((0[1,3-9])|(1[0-2])))))\/((20[0-9][0-9])|(19[0-9][0-9])))|((29\/02\/(19|20)(([02468][048])|([13579][26]))))$ "></asp:RegularExpressionValidator>
+                    
                             <!-- form group [order by] -->
                             <div class="form-group">
                                 <asp:Button ID="Buscar" type="number" class="btn btn-default filter-col" runat="server" Text="Buscar" OnClick="Buscar_Click" />

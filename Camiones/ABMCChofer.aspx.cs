@@ -66,9 +66,9 @@ namespace Camiones
                 
             }
 
-           /* LimpiarCampos();
+            LimpiarCampos();
             panel_grilla.Visible = true;
-            formulario.Visible = false;*/
+            formulario.Visible = false;
             CargarGrillaChoferes();
             
 

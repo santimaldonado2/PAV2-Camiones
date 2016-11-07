@@ -41,19 +41,14 @@ namespace NegocioDatos
                 {
                     commandText += " AND p.montoTotal < @montoMax";
                 }
+                if (fecha_min != fechaMinLocal && fecha_max != fechaMaxLocal)
+                {
+                    commandText += " AND p.fechaPago between '" + fecha_min + "' AND '" + fecha_max + "'";
+                }
 
                 commandText += @" GROUP BY p.idPago,c.nroDoc,c.nombreChofer,p.montoTotal,p.fechaPago 
                                  HAVING 1 = 1 ";
-/*
-                if (fecha_min != fechaMinLocal)
-                {
-                    commandText += "AND SUM(dv.distancia) > @distancia_min ";
-                }
 
-                if (fecha_max != fechaMaxLocal)
-                {
-                    commandText += "AND SUM(dv.distancia) < @distancia_max ";
-                }*/
                 SqlCommand cmd = GestorConexion.iniciarComando(cn, commandText);
 
                 if (chofer_id != -1)
@@ -70,15 +65,11 @@ namespace NegocioDatos
                     cmd.Parameters.AddWithValue("@montoMax", montoMax);
                 }
                 /*
-                if (fecha_min != -1)
+                if (fecha_min != "01/01/1000")
                 {
-                    cmd.Parameters.AddWithValue("@distancia_min", fecha_min);
-                }
-
-                if (fecha_max != -1)
-                {
-                    cmd.Parameters.AddWithValue("@distancia_max", fecha_max);
+                    cmd.Parameters.AddWithValue("@fecha_min", fecha_min);
                 }*/
+
 
                 cmd.Transaction = tran;
                 SqlDataReader dr = cmd.ExecuteReader();

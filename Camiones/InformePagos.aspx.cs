@@ -41,8 +41,10 @@ namespace Camiones
 
                     public void CargarGrillaPagos()
                     {
-                        DateTime fechaMin = DateTime.Parse("01/01/2000");
-                        DateTime fechaMax = DateTime.Parse("01/01/2000");
+                        DateTime fechaMin = DateTime.ParseExact("01/01/1000", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                        fechaMin = DateTime.Parse("01/01/1000");
+                        DateTime fechaMax = DateTime.ParseExact("01/01/1000", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                        fechaMax = DateTime.Parse("01/01/1000");
                     GrillaPagos.DataSource = (from PagoChofer in GestorInformePagos.buscarPagos(-1,-1,-1, fechaMin, fechaMax)
                                                    orderby PagoChofer.idPago
                                                    select PagoChofer);
@@ -57,8 +59,7 @@ namespace Camiones
             double monto_min, monto_max;
             idChofer = Convert.ToInt32(SelectChofer.SelectedValue);
             DateTime fechaMin, fechaMax;
-            fechaMin = DateTime.Parse("01/01/2000");
-            fechaMax = DateTime.Parse("01/01/2000");
+            
 
             if (Monto_min.Text != "")
             {
@@ -76,6 +77,23 @@ namespace Camiones
             else
             {
                 monto_max = -1;
+            }
+
+            if (FechaMax.Text != "")
+            {
+                fechaMax = Convert.ToDateTime(FechaMax.Text);
+            }
+            else
+            {
+                fechaMax = DateTime.Parse("01/01/1000");
+            }
+            if(FechaMin.Text != "")
+            {
+                fechaMin = Convert.ToDateTime(FechaMin.Text);
+            }
+            else
+            {
+                fechaMin = DateTime.Parse("01/01/1000");
             }
 
             GrillaPagos.DataSource = (from PagoChofer in GestorInformePagos.buscarPagos(idChofer, monto_min, monto_max, fechaMin, fechaMax)

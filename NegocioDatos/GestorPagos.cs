@@ -70,14 +70,13 @@ namespace NegocioDatos
 
                 foreach (DetallePago detallePago in detalles)
                 {
-                    SqlCommand cmdDetalle = GestorConexion.iniciarComando(cn, "INSERT INTO DetallePago (idDetallePago,idPago,idViaje,monto,descuentoAdelanto) VALUES (@idDetallePago,@idPago,@idViaje,@monto,@descuentoAdelanto);select Scope_Identity() as ID");
-                    cmdDetalle.Parameters.AddWithValue("@idDetallePago", detallePago.idDetallePago);
-                    cmdDetalle.Parameters.AddWithValue("@idPago", detallePago.Pago.IdPago);
+                    SqlCommand cmdDetalle = GestorConexion.iniciarComando(cn, "INSERT INTO DetallePago (idPago,idViaje,monto,descuentoAdelanto) VALUES (@idPago,@idViaje,@monto,@descuentoAdelanto);select Scope_Identity() as ID");
+                    cmdDetalle.Parameters.AddWithValue("@idPago", pago.IdPago);
                     cmdDetalle.Parameters.AddWithValue("@idViaje", detallePago.idViaje);
                     cmdDetalle.Parameters.AddWithValue("@monto", detallePago.monto);
                     cmdDetalle.Parameters.AddWithValue("@descuentoAdelanto", detallePago.descuentoAdelanto);
 
-                    cmd.Transaction = tran;
+                    cmdDetalle.Transaction = tran;
                     cmdDetalle.ExecuteNonQuery();
                 }
 

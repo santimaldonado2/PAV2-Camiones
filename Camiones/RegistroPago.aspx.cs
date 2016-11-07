@@ -35,15 +35,15 @@ namespace Camiones
                 SelectChofer.DataValueField = "idChofer";
                 SelectChofer.DataTextField = "nombreChofer";
                 SelectChofer.DataBind();
-                /*
-                SelectViaje.DataSource = GestorViaje;
+                
+                SelectViaje.DataSource = GestorViaje.listarChoferes();
                 SelectViaje.DataValueField = "idViaje";
                 SelectViaje.DataBind();
-                */
+                
                 detalles = new LinkedList<DetallePago>();
                 detalles_grilla = new LinkedList<DTEDetallePago>();
                 MontoTotal.Text = "0.0";
-
+                
                 Registrar.Visible = false;
             }
         }
@@ -51,12 +51,8 @@ namespace Camiones
         public void LimpiarCampos()
         {
             SelectViaje.SelectedValue = SelectViaje.SelectedValue;
-            SelectChofer.SelectedValue = SelectChofer.SelectedValue;
 
             SelectViaje.SelectedIndex = -1;
-            SelectChofer.SelectedIndex = -1;
-            FechaPago.Text = "";
-            MontoTotal.Text = "";
             Monto.Text = "";
             DescuentoAdelanto.Text = "";
 
@@ -67,12 +63,14 @@ namespace Camiones
         {
             PagoChofer pago = new PagoChofer();
             pago.Chofer = GestorChoferes.buscarChofer(Convert.ToInt32(SelectChofer.SelectedValue));
+            pago.FechaPago = DateTime.ParseExact(FechaPago.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
             pago.FechaPago = Convert.ToDateTime(FechaPago.Text);
+            pago.MontoTotal = Convert.ToDouble(MontoTotal.Text);
 
             GestorPagos.insertarPagoChofer(pago, detalles);
 
 
-            Response.Redirect("InformeViajes.aspx");
+            Response.Redirect("InformePagos.aspx");
         }
 
         protected void Agregar_Click(object sender, EventArgs e)

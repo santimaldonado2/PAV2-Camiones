@@ -50,6 +50,7 @@
     <Compile Include="GestorPagos.cs" />
     <Compile Include="GestorSeguridad.cs" />
     <Compile Include="GestorUsuarios.cs" />
+    <Compile Include="GestorViaje.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
