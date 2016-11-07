@@ -44,8 +44,10 @@
     <Compile Include="GestorChoferes.cs" />
     <Compile Include="GestorCiudades.cs" />
     <Compile Include="GestorConexion.cs" />
+    <Compile Include="GestorInformePagos.cs" />
     <Compile Include="GestorInformeViajes.cs" />
     <Compile Include="GestorMarcas.cs" />
+    <Compile Include="GestorPagos.cs" />
     <Compile Include="GestorSeguridad.cs" />
     <Compile Include="GestorUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

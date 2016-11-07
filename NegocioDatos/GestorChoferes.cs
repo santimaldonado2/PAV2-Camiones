@@ -18,7 +18,7 @@ namespace NegocioDatos
             SqlTransaction tran = cn.BeginTransaction();
             try
             {
-                SqlCommand cmd = GestorConexion.iniciarComando(cn, "INSERT INTO Chofer (nombreChofer,idCiudad,nroDoc,fechaNac,activo) VALUES (@nombreChofer,@nroDoc,@fechaNac,@activo,@ciudad);select Scope_Identity() as ID");
+                SqlCommand cmd = GestorConexion.iniciarComando(cn, "INSERT INTO Chofer (nombreChofer,idCiudad,nroDoc,fechaNac,activo) VALUES (@nombreChofer,@ciudad,@nroDoc,@fechaNac,@activo);select Scope_Identity() as ID");
                 cmd.Parameters.AddWithValue("@nombreChofer", chofer.NombreChofer);
                 cmd.Parameters.AddWithValue("@nroDoc", chofer.NroDoc);
                 cmd.Parameters.AddWithValue("@fechaNac", chofer.FechaNac);
@@ -33,8 +33,14 @@ namespace NegocioDatos
             }
             catch (SqlException ex)
             {
+                
                 tran.Rollback();
                 mensaje = ex.Message;
+                
+                if (mensaje.Contains("UK_Nro_Doc"))
+                {
+                    throw new Exception("El nro de documento que ha ingresado ya se encuentra registrado, modifique los datos y vuelva a intentarlo");
+                }
                 return mensaje;
             }
             finally

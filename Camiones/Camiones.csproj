@@ -116,9 +116,11 @@
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="InformeViajes.aspx" />
+    <Content Include="RegistroPago.aspx" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\datepicker.js" />
+    <Content Include="InformePagos.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -183,6 +185,20 @@
     </Compile>
     <Compile Include="InformeViajes.aspx.designer.cs">
       <DependentUpon>InformeViajes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InformePagos.aspx.cs">
+      <DependentUpon>InformePagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InformePagos.aspx.designer.cs">
+      <DependentUpon>InformePagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroPago.aspx.cs">
+      <DependentUpon>RegistroPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroPago.aspx.designer.cs">
+      <DependentUpon>RegistroPago.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

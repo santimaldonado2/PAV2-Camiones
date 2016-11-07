@@ -21,6 +21,7 @@
                 <div class="row form-group col-md-12">
                     <label for="NombreChofer">Nombre</label>
                     <asp:TextBox ID="NombreChofer" name="NombreChofer" class="form-control" runat="server" MaxLength="49"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFielValidatorNombre" ForeColor="red" runat="server" ControlToValidate="NombreChofer" EnableTheming="True" ErrorMessage="Nombre de chofer requerido"></asp:RequiredFieldValidator>
                 </div>
 
                 <div class="row col-md-12 form-group">
@@ -38,7 +39,7 @@
                 </div>
                 <div class="row col-md-12 form-group">
                     <label for="SelectCiudad">Ciudad</label>
-                    <asp:DropDownList ID="SelectCiudad" class="form-control" AutoPostBack="true" runat="server">
+                    <asp:DropDownList ID="SelectCiudad" class="form-control" runat="server">
                     </asp:DropDownList>
                 </div>
                 <div class="row form-group col-md-12">

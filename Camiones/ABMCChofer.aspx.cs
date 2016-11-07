@@ -23,7 +23,7 @@ namespace Camiones
             }
 
             if (!IsPostBack)
-                {
+            {
                     SelectCiudad.DataSource = GestorCiudades.listarCiudades();
                     SelectCiudad.DataValueField = "idCiudad";
                     SelectCiudad.DataTextField = "nombre";
@@ -55,7 +55,15 @@ namespace Camiones
             }
             else
             {
-                Mensaje.Text = GestorChoferes.insertarChofer(chofer);
+                try
+                {
+                    Mensaje.Text = GestorChoferes.insertarChofer(chofer);
+                }
+                catch(Exception ex)
+                {
+                    Mensaje.Text = ex.Message;
+                }
+                
             }
 
            /* LimpiarCampos();
