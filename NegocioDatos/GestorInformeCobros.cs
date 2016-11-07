@@ -22,11 +22,11 @@ namespace NegocioDatos
             //VER SENTENCIA SQL POR EL TEMA DE LA FECHA, COBROS Y DEMAS
 
             String commandText = @"SELECT	cl.nombreCliente,
-                                            co.tipoCobro,
-		                                    co.montoCobro,
-                                            co.fechaCobro
+                                            co.montoCobro,
+                                            co.fechaCobro,
+                                            co.tipoCobro
                                     FROM    Cobro co,
-		                                    Cliente cl,
+		                                    Cliente cl
                                     WHERE   co.idCliente = cl.idCliente";
 
             try
