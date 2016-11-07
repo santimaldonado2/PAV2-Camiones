@@ -94,11 +94,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ABMCChofer.aspx" />
+    <Content Include="camion.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="InformePagos.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -115,6 +118,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="InformeViajes.aspx" />
+    <Content Include="RegistroPago.aspx" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\datepicker.js" />
@@ -150,12 +154,26 @@
     <Compile Include="ABMCCamion.aspx.designer.cs">
       <DependentUpon>ABMCCamion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ABMCChofer.aspx.cs">
+      <DependentUpon>ABMCChofer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABMCChofer.aspx.designer.cs">
+      <DependentUpon>ABMCChofer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Camiones.Master.cs">
       <DependentUpon>Camiones.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Camiones.Master.designer.cs">
       <DependentUpon>Camiones.Master</DependentUpon>
+    </Compile>
+    <Compile Include="InformePagos.aspx.cs">
+      <DependentUpon>InformePagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InformePagos.aspx.designer.cs">
+      <DependentUpon>InformePagos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Login.aspx.cs">
@@ -192,6 +210,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroPago.aspx.cs">
+      <DependentUpon>RegistroPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroPago.aspx.designer.cs">
+      <DependentUpon>RegistroPago.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

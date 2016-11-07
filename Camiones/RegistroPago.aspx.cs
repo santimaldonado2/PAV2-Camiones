@@ -35,8 +35,8 @@ namespace Camiones
                 SelectChofer.DataValueField = "idChofer";
                 SelectChofer.DataTextField = "nombreChofer";
                 SelectChofer.DataBind();
-                
-                SelectViaje.DataSource = GestorViaje.listarChoferes();
+
+                SelectViaje.DataSource = GestorViajes.listarViajes();
                 SelectViaje.DataValueField = "idViaje";
                 SelectViaje.DataBind();
                 
@@ -70,7 +70,7 @@ namespace Camiones
             GestorPagos.insertarPagoChofer(pago, detalles);
 
 
-            Response.Redirect("InformePagos.aspx");
+           // Response.Redirect("InformePagos.aspx");
         }
 
         protected void Agregar_Click(object sender, EventArgs e)

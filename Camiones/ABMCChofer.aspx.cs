@@ -26,7 +26,7 @@ namespace Camiones
             {
                     SelectCiudad.DataSource = GestorCiudades.listarCiudades();
                     SelectCiudad.DataValueField = "idCiudad";
-                    SelectCiudad.DataTextField = "nombre";
+                    SelectCiudad.DataTextField = "nombreCiudad";
                     SelectCiudad.DataBind();
 
                     FechaNacCompareValidator.ValueToCompare = string.Format("{0:dd/MM/yyyy}", DateTime.Today.ToShortDateString());

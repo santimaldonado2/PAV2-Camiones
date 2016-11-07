@@ -140,7 +140,7 @@ namespace NegocioDatos
                 {
                     Ciudad ciudad = new Ciudad();
                     ciudad.IdCiudad = Int32.Parse(dr["idCiudad"].ToString());
-                    ciudad.Nombre = dr["nombre"].ToString();
+                    ciudad.NombreCiudad = dr["nombre"].ToString();
 
                     Chofer Chofer = new Chofer();
                     Chofer.IdChofer = (int)dr["idChofer"];
@@ -233,7 +233,7 @@ namespace NegocioDatos
                 {
                     Ciudad ciudad = new Ciudad();
                     ciudad.IdCiudad = Int32.Parse(dr["idCiudad"].ToString());
-                    ciudad.Nombre = dr["nombre"].ToString();
+                    ciudad.NombreCiudad = dr["nombre"].ToString();
 
                     Chofer chofer = new Chofer();
                     chofer.IdChofer = (int)dr["idChofer"];

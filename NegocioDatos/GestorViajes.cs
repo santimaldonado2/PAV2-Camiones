@@ -18,11 +18,11 @@ namespace NegocioDatos
             string mensaje="";
             try
             {
-                SqlCommand cmd = GestorConexion.iniciarComando(cn, @"INSERT INTO Viaje (idChofer,idCamion)
-                                                                     VALUES(@idChofer,@idCamion); SELECT @@IDENTITY");
+                SqlCommand cmd = GestorConexion.iniciarComando(cn, @"INSERT INTO Viaje (idChofer,idViaje)
+                                                                     VALUES(@idChofer,@idViaje); SELECT @@IDENTITY");
 
                 cmd.Parameters.AddWithValue("@idChofer", viaje.Chofer.IdChofer);
-                cmd.Parameters.AddWithValue("@idCamion", viaje.Camion.IdCamion);
+                cmd.Parameters.AddWithValue("@idViaje", viaje.IdViaje);
                 cmd.Transaction = tran;
                 viaje.IdViaje = Convert.ToInt32(cmd.ExecuteScalar());
                 
@@ -78,6 +78,43 @@ namespace NegocioDatos
             return mensaje;
         }
 
-           
+        public static LinkedList<Viaje> listarViajes()
+        {
+            LinkedList<Viaje> lista = new LinkedList<Viaje>();
+            SqlConnection cn = GestorConexion.abrirConexion();
+            SqlTransaction tran = cn.BeginTransaction();
+            try
+            {
+                SqlCommand cmd = GestorConexion.iniciarComando(cn, @"SELECT v.idViaje,
+                                                                            v.idChofer,
+                                                                            v.idCamion
+                                                                      FROM  Viaje v");
+                cmd.Transaction = tran;
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    
+
+                    Viaje viaje = new Viaje();
+                    viaje.IdViaje = (int)dr["idViaje"];
+                    viaje.Chofer = GestorChoferes.buscarChofer((int)dr["idChofer"]);
+                    viaje.Camion = GestorCamiones.buscarCamion((int)dr["idCamion"]);
+                    lista.AddLast(viaje);
+                }
+                dr.Close();
+                return lista;
+            }
+            catch (SqlException ex)
+            {
+                tran.Rollback();
+                return lista;
+            }
+            finally
+            {
+                GestorConexion.cerrarConexion(cn);
+            }
+        }
+
+
     }
 }

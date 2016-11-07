@@ -70,7 +70,7 @@
                         <asp:CommandField SelectText="Seleccionar" ShowSelectButton="True" />
                         <asp:BoundField DataField="NombreChofer" HeaderText="Nombre chofer" />
                         <asp:BoundField DataField="NroDoc" HeaderText="Nro Documento" />
-                        <asp:BoundField HeaderText="Ciudad" DataField="ciudad.Nombre" />
+                        <asp:BoundField HeaderText="Ciudad" DataField="ciudad.NombreCiudad" />
                         <asp:BoundField DataField="FechaNac" DataFormatString="{0:dd/MM/yyyy}" HeaderText="Fecha de Nacimiento" />
                         <asp:TemplateField HeaderText="Activo" >
                             <ItemTemplate><%# (Boolean.Parse(Eval("Activo").ToString())) ? "Si" : "No" %></ItemTemplate>

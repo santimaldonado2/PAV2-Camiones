@@ -86,7 +86,7 @@ namespace NegocioDatos
                 dr.Close();
                 return lista;
             }
-            catch (SqlException)
+            catch (SqlException ex)
             {
                 tran.Rollback();
                 return lista;
