@@ -3,3 +3,8 @@ D:\Maldo\Documentos\utn\PAV2\Camiones\Entidades\bin\Debug\Entidades.pdb
 D:\Maldo\Documentos\utn\PAV2\Camiones\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
 D:\Maldo\Documentos\utn\PAV2\Camiones\Entidades\obj\Debug\Entidades.dll
 D:\Maldo\Documentos\utn\PAV2\Camiones\Entidades\obj\Debug\Entidades.pdb
+D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Entidades\bin\Debug\Entidades.dll
+D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Entidades\bin\Debug\Entidades.pdb
+D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Entidades\obj\Debug\Entidades.dll
+D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Entidades\obj\Debug\Entidades.pdb

@@ -35,6 +35,7 @@ D:\Maldo\Documentos\utn\PAV2\Camiones\Camiones\bin\Microsoft.CodeDom.Providers.D
 D:\Maldo\Documentos\utn\PAV2\Camiones\Camiones\obj\Debug\Camiones.csprojResolveAssemblyReference.cache
 D:\Maldo\Documentos\utn\PAV2\Camiones\Camiones\obj\Debug\Camiones.dll
 D:\Maldo\Documentos\utn\PAV2\Camiones\Camiones\obj\Debug\Camiones.pdb
+D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Camiones\obj\Debug\Camiones.csprojResolveAssemblyReference.cache
 D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Camiones\bin\ApplicationInsights.config
 D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Camiones\bin\roslyn\csc.exe
 D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Camiones\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -69,6 +70,5 @@ D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Camiones\bin\Microsoft.AI.Web.xml
 D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Camiones\bin\Microsoft.AI.WindowsServer.xml
 D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Camiones\bin\Microsoft.ApplicationInsights.xml
 D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Camiones\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Camiones\obj\Debug\Camiones.csprojResolveAssemblyReference.cache
 D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Camiones\obj\Debug\Camiones.dll
 D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Camiones\obj\Debug\Camiones.pdb

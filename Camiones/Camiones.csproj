@@ -118,6 +118,8 @@
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\datepicker.js" />
+    <Content Include="RegistrarViaje.aspx" />
+    <Content Include="Home.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -133,6 +135,7 @@
     </Content>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="scripts\datepickermin.js" />
     <Content Include="scripts\dialog.js" />
     <Content Include="scripts\jquery-3.1.1.min.js" />
     <Content Include="Web.config">
@@ -175,6 +178,20 @@
     </Compile>
     <Compile Include="InformeViajes.aspx.designer.cs">
       <DependentUpon>InformeViajes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarViaje.aspx.cs">
+      <DependentUpon>RegistrarViaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarViaje.aspx.designer.cs">
+      <DependentUpon>RegistrarViaje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
