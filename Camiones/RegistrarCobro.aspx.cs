@@ -70,6 +70,7 @@ namespace Camiones
             dteDetalleCobro.kilogramos = dv.Kilogramos;
             dteDetalleCobro.precioUnitario = dv.PrecioUnitario;
             dteDetalleCobro.subtotal = dv.Subtotal;
+            dteDetalleCobro.distancia = dv.Distancia;
 
             detalles_grilla.AddLast(dteDetalleCobro);
 
@@ -100,7 +101,6 @@ namespace Camiones
 
             Response.Redirect("InformeViajes.aspx");
         }
-
 
     }
 }

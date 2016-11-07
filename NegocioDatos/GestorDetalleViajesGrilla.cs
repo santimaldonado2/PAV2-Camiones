@@ -18,7 +18,7 @@ namespace NegocioDatos
             SqlTransaction tran = cn.BeginTransaction();
             try
             {
-                SqlCommand cmd = GestorConexion.iniciarComando(cn, "SELECT d.idDetalleViaje, d.fechaSalida, d.fechaLLegada, d.kilogramos, c.nombreCliente, d.distancia, d.precioUnitario FROM DetalleViaje d JOIN Cliente c ON d.idCliente = c.idCliente ");
+                SqlCommand cmd = GestorConexion.iniciarComando(cn, "SELECT d.idDetalleViaje, d.fechaSalida, d.fechaLLegada, d.kilogramos, c.nombreCliente, d.distancia, d.precioUnitario FROM DetalleViaje d, Cliente c WHERE d.idCliente = c.idCliente ");
                 cmd.Transaction = tran;
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
