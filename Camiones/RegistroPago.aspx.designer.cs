@@ -10,16 +10,34 @@
 namespace Camiones {
     
     
-    public partial class InformeViajes {
+    public partial class RegistroPago {
         
         /// <summary>
-        /// Control lblChofer.
+        /// Control Mensaje.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblChofer;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Mensaje;
+        
+        /// <summary>
+        /// Control formulario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl formulario;
+        
+        /// <summary>
+        /// Control titulo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl titulo;
         
         /// <summary>
         /// Control SelectChofer.
@@ -31,67 +49,76 @@ namespace Camiones {
         protected global::System.Web.UI.WebControls.DropDownList SelectChofer;
         
         /// <summary>
-        /// Control lblCamion.
+        /// Control FechaPago.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCamion;
+        protected global::System.Web.UI.WebControls.TextBox FechaPago;
         
         /// <summary>
-        /// Control SelectCamion.
+        /// Control RegularExpressionValidatorFecha.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList SelectCamion;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidatorFecha;
         
         /// <summary>
-        /// Control lblDistancia.
+        /// Control MontoTotal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDistancia;
+        protected global::System.Web.UI.WebControls.TextBox MontoTotal;
         
         /// <summary>
-        /// Control Distancia_min.
+        /// Control formDetalle.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Distancia_min;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl formDetalle;
         
         /// <summary>
-        /// Control lblDistanciaMax.
+        /// Control SelectViaje.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDistanciaMax;
+        protected global::System.Web.UI.WebControls.DropDownList SelectViaje;
         
         /// <summary>
-        /// Control Distancia_max.
+        /// Control Monto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Distancia_max;
+        protected global::System.Web.UI.WebControls.TextBox Monto;
         
         /// <summary>
-        /// Control Buscar.
+        /// Control DescuentoAdelanto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Buscar;
+        protected global::System.Web.UI.WebControls.TextBox DescuentoAdelanto;
+        
+        /// <summary>
+        /// Control Agregar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Agregar;
         
         /// <summary>
         /// Control panel_grilla.
@@ -112,12 +139,21 @@ namespace Camiones {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divGrilla;
         
         /// <summary>
-        /// Control GrillaViajes.
+        /// Control GrillaPagos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GrillaViajes;
+        protected global::System.Web.UI.WebControls.GridView GrillaPagos;
+        
+        /// <summary>
+        /// Control Registrar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Registrar;
     }
 }

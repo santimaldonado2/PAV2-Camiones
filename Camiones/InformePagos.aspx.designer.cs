@@ -10,7 +10,7 @@
 namespace Camiones {
     
     
-    public partial class InformeViajes {
+    public partial class WebForm1 {
         
         /// <summary>
         /// Control lblChofer.
@@ -31,58 +31,76 @@ namespace Camiones {
         protected global::System.Web.UI.WebControls.DropDownList SelectChofer;
         
         /// <summary>
-        /// Control lblCamion.
+        /// Control lblMonto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCamion;
+        protected global::System.Web.UI.WebControls.Label lblMonto;
         
         /// <summary>
-        /// Control SelectCamion.
+        /// Control Monto_min.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList SelectCamion;
+        protected global::System.Web.UI.WebControls.TextBox Monto_min;
         
         /// <summary>
-        /// Control lblDistancia.
+        /// Control lblMontoMax.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDistancia;
+        protected global::System.Web.UI.WebControls.Label lblMontoMax;
         
         /// <summary>
-        /// Control Distancia_min.
+        /// Control Monto_max.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Distancia_min;
+        protected global::System.Web.UI.WebControls.TextBox Monto_max;
         
         /// <summary>
-        /// Control lblDistanciaMax.
+        /// Control FechaMin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDistanciaMax;
+        protected global::System.Web.UI.WebControls.TextBox FechaMin;
         
         /// <summary>
-        /// Control Distancia_max.
+        /// Control RegularExpressionValidatorFechaDesde.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Distancia_max;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidatorFechaDesde;
+        
+        /// <summary>
+        /// Control FechaMax.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox FechaMax;
+        
+        /// <summary>
+        /// Control RegularExpressionValidatorFechaHasta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidatorFechaHasta;
         
         /// <summary>
         /// Control Buscar.
@@ -112,12 +130,12 @@ namespace Camiones {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divGrilla;
         
         /// <summary>
-        /// Control GrillaViajes.
+        /// Control GrillaPagos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GrillaViajes;
+        protected global::System.Web.UI.WebControls.GridView GrillaPagos;
     }
 }

@@ -72,3 +72,40 @@ D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Camiones\bin\Microsoft.ApplicationIns
 D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Camiones\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Camiones\obj\Debug\Camiones.dll
 D:\Maldo\Documentos\utn\PAV2\PAV2-Camiones\Camiones\obj\Debug\Camiones.pdb
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\ApplicationInsights.config
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\roslyn\csc.exe
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\roslyn\vbc.exe
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\roslyn\VBCSCompiler.exe
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Camiones.dll.config
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Camiones.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Camiones.pdb
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Entidades.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Microsoft.AI.Web.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\NegocioDatos.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Entidades.pdb
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\NegocioDatos.pdb
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Microsoft.AI.Web.xml
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\obj\Debug\Camiones.csprojResolveAssemblyReference.cache
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\obj\Debug\Camiones.dll
+C:\Users\Romina\Documents\FACU\5 - Quinto año\bostaPav\PAV2-Camiones\Camiones\obj\Debug\Camiones.pdb
