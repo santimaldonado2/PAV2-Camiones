@@ -53,7 +53,9 @@
 
                 </Columns>
             </asp:GridView>
-        </div>
+            <br />
+            <br />
+            <asp:Button ID="btnCancel" runat="server"  class="btn  btn-danger abreDialog" Text="Cancelar" OnClick="btnCancel_Click" /></div>
     </div>
 
 

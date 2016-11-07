@@ -102,5 +102,9 @@ namespace Camiones
             Response.Redirect("InformeViajes.aspx");
         }
 
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
+        }
     }
 }

@@ -66,7 +66,9 @@
                     <label for="BuscarNombre">Buscar por Nombre</label>
                     <asp:TextBox ID="BuscarNombre" class="form-control" runat="server"></asp:TextBox>
                     <asp:Button ID="Buscar" class="btn btn-default " CausesValidation="false" runat="server" Text="Buscar" OnClick="Buscar_Click" />
+                    &nbsp;&nbsp;&nbsp;
                     <asp:Button ID="Crear" class="btn btn-primary " CausesValidation="false" runat="server" Text="Crear" OnClick="Crear_Click" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnCancel" runat="server"  class="btn  btn-danger abreDialog" Text="Cancelar" OnClick="btnCancel_Click" />
                 </div>
             </div>
             <br />

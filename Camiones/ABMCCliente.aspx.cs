@@ -34,7 +34,7 @@ namespace Camiones
 
                 string aaaa = DateTime.Today.ToShortDateString();
 
-                FechaInscripcionCompareValidator.ValueToCompare = string.Format("{0:MM/dd/yyyy}", DateTime.Today.ToShortDateString());
+                FechaInscripcionCompareValidator.ValueToCompare = string.Format("{0:dd/MM/yyyy}", DateTime.Today.ToShortDateString());
 
 
 
@@ -63,7 +63,7 @@ namespace Camiones
                 Ciudad ciudad = new Ciudad();
                 cliente.NombreCliente = NombreCliente.Text;
                 cliente.ClienteFijo = ClienteFijo.Checked;
-                cliente.FechaInscripcion = DateTime.ParseExact(FechaInscripcion.Text, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                cliente.FechaInscripcion = DateTime.ParseExact(FechaInscripcion.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
                 cliente.NroCuit = Int32.Parse(NroCuit.Text);
                 ciudad.IdCiudad = Int32.Parse(SelectCiudad.SelectedValue);
                 cliente.Ciudad = ciudad;
@@ -184,11 +184,10 @@ namespace Camiones
             titulo.InnerText = "Nuevo Cliente";
         }
 
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
 
-
-
-
-
-
+        }
     }
 }

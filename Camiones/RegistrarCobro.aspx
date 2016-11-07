@@ -7,28 +7,35 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <div class="form-inline" role="form">
-                <h2 id="titulo" runat="server">Registrar Cobro</h2>
-                <div class="form-group">
+                <h2 id="titulo" runat="server">&nbsp;&nbsp;&nbsp;Registrar Cobro</h2>                     &nbsp;<div class="form-group">
+                    &nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lblCliente" for="SelectCliente" class="filter-col" Style="margin-right: 0;" runat="server" Text="Cliente"></asp:Label>
-                    <asp:DropDownList class="form-control" ID="SelectCliente" runat="server"></asp:DropDownList>
+                        &nbsp;&nbsp;&nbsp;
+                
+    <asp:DropDownList class="form-control" ID="SelectCliente" runat="server"></asp:DropDownList>
 
                 </div>
+                   <p> </p>
                 <!-- form group [rows] -->
                 <div class="form-group">
-                    <asp:Label ID="lblTipoCobro" for="SelectTipoCobro" class="filter-col" Style="margin-right: 0;" runat="server" Text="Tipo de Cobro"></asp:Label>
+                                        &nbsp;&nbsp;&nbsp;
+<asp:Label ID="lblTipoCobro" for="SelectTipoCobro" class="filter-col" Style="margin-right: 0;" runat="server" Text="Tipo de Cobro"></asp:Label>
                     <asp:DropDownList class="form-control" ID="SelectTipoCobro" runat="server"></asp:DropDownList>
                 </div>
-
+                <p> </p>
                 <div>
-                 <label for="FechaCobro">Fecha de Cobro</label>
+                                     &nbsp;&nbsp;&nbsp;
+<label for="FechaCobro">Fecha de Cobro</label>
                     <asp:TextBox ID="FechaCobro" class="form-control datepicker" runat="server"></asp:TextBox>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidatorFecha" ForeColor="Red" runat="server" ControlToValidate="FechaCobro" EnableTheming="True" ErrorMessage="Ingrese una fecha válida con el formato DD/MM/YYYY" SetFocusOnError="False" ValidationExpression="^(((((0[1-9])|(1\d)|(2[0-8]))\/((0[1-9])|(1[0-2])))|((31\/((0[13578])|(1[02])))|((29|30)\/((0[1,3-9])|(1[0-2])))))\/((20[0-9][0-9])|(19[0-9][0-9])))|((29\/02\/(19|20)(([02468][048])|([13579][26]))))$ "></asp:RegularExpressionValidator>
                 </div>
 
 
-
+                <p> </p>
                 <div class="form-group">
-                <asp:Label ID="lblMonto" for="MontoTotal" class="filter-col" Style="margin-right: 0;" runat="server" Text="Monto Total"></asp:Label>
+                                    &nbsp;&nbsp;&nbsp;
+<asp:Label ID="lblMonto" for="MontoTotal" class="filter-col" Style="margin-right: 0;" runat="server" Text="Monto Total"></asp:Label>
+                &nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtMontoTotal" type="number" step="0.01" runat="server"></asp:TextBox>
                
             </div>
@@ -38,9 +45,11 @@
         </div>
     </div>
     <div class="panel panel-default">
-        <h2  id="H1" runat="server">Cargar Detalle de Cobro</h2>
+        <h2  id="H1" runat="server">&nbsp;&nbsp;&nbsp; Cargar Detalle de Cobro</h2>
         
         <div class="form-inline" role="form">
+
+        &nbsp;&nbsp;&nbsp;
 
         <asp:Label ID="Label1" for="SelectTipoCobro" class="filter-col" Style="margin-right: 0;" runat="server" Text="Seleccione viaje"></asp:Label>   
         <asp:GridView ID="GrillaDetallesViajes" runat="server" AutoGenerateColumns="False" DataKeyNames="idDetalleViaje" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
@@ -69,15 +78,18 @@
         </asp:GridView>
 
               <div class="form-group">
-                <asp:Button ID="Agregar" runat="server" class="btn btn-default" Text="Agregar" OnClick="Agregar_Click" />
+                     <p>
+     </p>
+                                    &nbsp;&nbsp;&nbsp; <asp:Button ID="Agregar" runat="server" class="btn btn-default" Text="Agregar" OnClick="Agregar_Click" />
             </div>
 
         <p>
      </p>
+               <p>
+     </p>
 
-            <asp:GridView ID="gridDetalleCobro" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
+  <asp:GridView ID="gridDetalleCobro" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
             <Columns>
-
                 <asp:BoundField DataField="NombreCliente" HeaderText="Cliente" />
                 <asp:BoundField DataField="TipoCobro" HeaderText="Tipo de Cobro" />
                 <asp:BoundField DataField="FechaCobro" DataFormatString="{0:mm/dd/yy}" HeaderText="Fecha de Cobro" />              
@@ -102,7 +114,9 @@
 
 
      <div>
-        <asp:Button ID="Registrar" runat="server" CausesValidation="false" Text="Registrar Cobro" OnClick="Registrar_Click" />
+            <p>
+     </p>
+                            &nbsp;&nbsp;&nbsp; <asp:Button ID="Registrar" runat="server" CausesValidation="false" class="btn btn-default" Text="Registrar Cobro" OnClick="Registrar_Click" />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <asp:Button ID="btnCancel" runat="server"  class="btn  btn-danger abreDialog" Text="Cancelar" OnClick="btnCancel_Click" />
     </div>
             
             </div>

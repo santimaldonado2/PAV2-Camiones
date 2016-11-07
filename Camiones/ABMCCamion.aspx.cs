@@ -31,7 +31,7 @@ namespace Camiones
                 SelectMarca.DataTextField = "nombre";
                 SelectMarca.DataBind();
 
-                FechaCompraCompareValidator.ValueToCompare = string.Format("{0:MM/dd/yyyy}", DateTime.Today.ToShortDateString());
+                FechaCompraCompareValidator.ValueToCompare = string.Format("{0:dd/MM/yyyy}", DateTime.Today.ToShortDateString());
 
                 CargarGrillaCamiones();
                 formulario.Visible = false;
@@ -46,7 +46,7 @@ namespace Camiones
                 Marca marca = new Marca();
                 camion.Patente = Patente.Text;
                 camion.Habilitado = Habilitado.Checked;
-                camion.FechaCompra = DateTime.ParseExact(FechaCompra.Text, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                camion.FechaCompra = DateTime.ParseExact(FechaCompra.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
                 camion.NroVehiculo = Int32.Parse(NroVehiculo.Text);
                 marca.IdMarca = Int32.Parse(SelectMarca.SelectedValue);
                 camion.Modelo = Modelo.Text;
@@ -95,7 +95,7 @@ namespace Camiones
             IdCamion.Text = camion.IdCamion.ToString();
             Patente.Text = camion.Patente;
             Habilitado.Checked = camion.Habilitado;
-            FechaCompra.Text = string.Format("{0:MM/dd/yyyy}", camion.FechaCompra);
+            FechaCompra.Text = string.Format("{0:dd/MM/yyyy}", camion.FechaCompra);
             NroVehiculo.Text = camion.NroVehiculo.ToString();
             SelectMarca.SelectedValue = camion.Marca.IdMarca.ToString();
             Modelo.Text = camion.Modelo;
