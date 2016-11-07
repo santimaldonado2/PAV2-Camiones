@@ -44,15 +44,14 @@
     <Compile Include="GestorChoferes.cs" />
     <Compile Include="GestorCiudades.cs" />
     <Compile Include="GestorClientes.cs" />
-    <Compile Include="GestorCobros.cs" />
-    <Compile Include="GestorDetalleViajesGrilla.cs" />
-    <Compile Include="GestorTipoCobros.cs" />
     <Compile Include="GestorConexion.cs" />
-    <Compile Include="GestorInformeCobros.cs" />
+    <Compile Include="GestorInformePagos.cs" />
     <Compile Include="GestorInformeViajes.cs" />
     <Compile Include="GestorMarcas.cs" />
+    <Compile Include="GestorPagos.cs" />
     <Compile Include="GestorSeguridad.cs" />
     <Compile Include="GestorUsuarios.cs" />
+    <Compile Include="GestorViajes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

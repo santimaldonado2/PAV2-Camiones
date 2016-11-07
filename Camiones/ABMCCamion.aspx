@@ -48,9 +48,9 @@
                     <asp:TextBox ID="Modelo" name="Modelo" class="form-control" runat="server" MaxLength="10"></asp:TextBox>
                 </div>
             </div>
-
+             <asp:Button ID="Cancelar" class="btn btn-default abreDialog" OnClientClick="openDialog()" CausesValidation="false" runat="server" Text="Cancelar" OnClick="Cancelar_click"/>
             <asp:Button ID="Guardar" class="btn btn-info abreDialog" OnClientClick="openDialog()" CausesValidation="true" runat="server" Text="Guardar" OnClick="Guardar_Click" />
-            <asp:Button ID="Eliminar" class="btn  btn-danger abreDialog" OnClientClick="openDialog()" CausesValidation="false" runat="server" Text="Eliminar" OnClick="Eliminar_Click" />
+            <asp:Button ID="Eliminar" class="btn  btn-danger abreDialog" OnClientClick="return confirm('Está seguro que desea eliminar el registro?');" CausesValidation="false" runat="server" Text="Eliminar" OnClick="Eliminar_Click" />
 
             <br />
         </div>

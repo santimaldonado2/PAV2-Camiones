@@ -38,6 +38,14 @@ namespace Camiones
             }
         }
 
+        protected void Cancelar_click(object sender, EventArgs e)
+        {
+            formulario.Visible = false;
+            panel_grilla.Visible = true;
+            LimpiarCampos();
+        }
+
+
         protected void Guardar_Click(object sender, EventArgs e)
         {
             if (campos_validos())
@@ -120,6 +128,7 @@ namespace Camiones
             panel_grilla.Visible = false;
             titulo.InnerText = "Modificar Camión";
             Eliminar.Visible = true;
+            Mensaje.InnerText = "";
         }
 
         protected void Eliminar_Click(object sender, EventArgs e)
@@ -173,6 +182,7 @@ namespace Camiones
             formulario.Visible = true;
             Eliminar.Visible = false;
             titulo.InnerText = "Nuevo Camión";
+            Mensaje.InnerText = "";
         }
     }
 }

@@ -44,15 +44,16 @@
     <Compile Include="Chofer.cs" />
     <Compile Include="Ciudad.cs" />
     <Compile Include="Cliente.cs" />
-    <Compile Include="Cobro.cs" />
-    <Compile Include="DetalleCobro.cs" />
-    <Compile Include="DetalleViajeParaGrilla.cs" />
-    <Compile Include="DTEDetalleCobro.cs" />
-    <Compile Include="DTEInformeCobros.cs" />
+    <Compile Include="DetallePago.cs" />
+    <Compile Include="DetalleViaje.cs" />
+    <Compile Include="DTEDetallePago.cs" />
+    <Compile Include="DTEDetalleViaje.cs" />
+    <Compile Include="DTEInformePagos.cs" />
     <Compile Include="DTEInformeViajes.cs" />
     <Compile Include="Marca.cs" />
+    <Compile Include="PagoChofer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TipoCobro.cs" />
+    <Compile Include="Provincia.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Viaje.cs" />
   </ItemGroup>

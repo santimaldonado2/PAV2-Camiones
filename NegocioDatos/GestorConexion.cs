@@ -9,8 +9,11 @@ namespace NegocioDatos
 {
     class GestorConexion
     {
-        static string cadenaConex = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\USER\\Documents\\GitHub\\PAV2-Camiones\\Camiones\\App_Data\\Camiones.mdf;Integrated Security=True";
-            public static SqlConnection abrirConexion()
+        
+        //static string cadenaConex = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Romina\\Documents\\FACU\\5 - Quinto año\\bostaPav\\PAV2-Camiones\\Camiones\\App_Data\\Camiones.mdf;Integrated Security=True;Connect Timeout=30";
+        static string cadenaConex = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Maldo\\Documentos\\utn\\PAV2\\PAV2-Camiones\\Camiones\\App_Data\\Camiones.mdf;Integrated Security=True;Connect Timeout=30";
+        
+        public static SqlConnection abrirConexion()
         {
             SqlConnection cn = new SqlConnection();
             cn.ConnectionString = cadenaConex;

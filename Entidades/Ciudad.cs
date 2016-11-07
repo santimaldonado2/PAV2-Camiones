@@ -9,6 +9,7 @@ namespace Entidades
     public class Ciudad
     {
         public int IdCiudad { get; set; }
+        public Provincia Provincia { get; set; }
         public string NombreCiudad { get; set; }
     }
 }

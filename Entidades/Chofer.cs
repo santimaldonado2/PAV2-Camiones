@@ -8,12 +8,12 @@ namespace Entidades
 {
     public class Chofer
     {
-        public int idChofer { get; set; }
-        public string nombreChofer { get; set; }
-        public int idCiudad { get; set; }
-        public int nroDoc { get; set; }
+        public int IdChofer { get; set; }
+        public string NombreChofer { get; set; }
+        public Ciudad Ciudad { get; set; }
+        public int NroDoc { get; set; }
         public DateTime FechaNac { get; set; }
-        public bool activo { get; set; }
+        public bool Activo { get; set; }
 
     }
 }
