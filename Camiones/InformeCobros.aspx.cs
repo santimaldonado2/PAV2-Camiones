@@ -35,12 +35,13 @@ namespace Camiones
                 SelectCliente.SelectedValue = "-1";
 
 
-                SelectCobro.DataSource = GestorCobros.listarCobros();
-                SelectCobro.DataValueField = "idCobro";
-                SelectCobro.DataTextField = "montoCobro";
+                SelectCobro.DataSource = GestorTipoCobros.listarTiposCobros();
+                SelectCobro.DataValueField = "idTipoCobro";
+                SelectCobro.DataTextField = "nombreTipoCobro";
                 SelectCobro.DataBind();
                 SelectCobro.Items.Add(new ListItem("Todos", "-1"));
                 SelectCobro.SelectedValue = "-1";
+
                 CargarGrillaCobros();
             }
         }
@@ -48,43 +49,48 @@ namespace Camiones
 
         public void CargarGrillaCobros()
         {
-            GrillaCobros.DataSource = (from viaje in GestorInformeCobros.buscarCobros(-1, -1, -1, -1)
-                                       orderby viaje.distanciaTotal
-                                       select viaje);
+            DateTime inicio = Convert.ToDateTime("01/01/1990");
+            DateTime fin = DateTime.Today;
 
-            GrillaCobros.DataKeyNames = new string[] { "idViaje" };
+            GrillaCobros.DataSource = (from cobro in GestorInformeCobros.buscarCobros(-1, -1, inicio, fin)
+                                       orderby cobro.fechaCobro
+                                       select cobro);
+
+            GrillaCobros.DataKeyNames = new string[] { "idCobro" };
             GrillaCobros.DataBind();
         }
 
         protected void Buscar_Click(object sender, EventArgs e)
         {
-            int idCamion, idChofer;
-            double distancia_min, distancia_max;
-            idCamion = Convert.ToInt32(SelectCliente.SelectedValue);
-            idChofer = Convert.ToInt32(SelectChofer.SelectedValue);
-            if (Distancia_min.Text != "")
+            int idCliente, idTipoCobro;
+            DateTime fechaMin, fechaMax;
+
+            idCliente = Convert.ToInt32(SelectCliente.SelectedValue);
+            idTipoCobro = Convert.ToInt32(SelectCobro.SelectedValue);
+
+            if (FechaMin.Text != "")
             {
-                distancia_min = Convert.ToInt32(Distancia_min.Text);
+                fechaMin = DateTime.ParseExact(FechaMin.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
             }
             else
             {
-                distancia_min = -1;
+                fechaMin = Convert.ToDateTime("01/01/1990");
             }
 
-            if (Distancia_max.Text != "")
+            if (FechaMax.Text != "")
             {
-                distancia_max = Convert.ToInt32(Distancia_max.Text);
+                fechaMax = DateTime.ParseExact(FechaMax.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
             }
             else
             {
-                distancia_max = -1;
+                fechaMax = DateTime.Today;
             }
 
-            GrillaCobros.DataSource = (from viaje in GestorInformeViajes.buscarViajes(idChofer, idCamion, distancia_min, distancia_max)
-                                       orderby viaje.distanciaTotal
-                                       select viaje);
+            GrillaCobros.DataSource = (from cobro in GestorInformeCobros.buscarCobros(idCliente, idTipoCobro, fechaMin, fechaMax)
+                                       orderby cobro.fechaCobro
+                                       select cobro);
 
-            GrillaCobros.DataKeyNames = new string[] { "idViaje" };
+            GrillaCobros.DataKeyNames = new string[] { "idCobro" };
             GrillaCobros.DataBind();
         }
 

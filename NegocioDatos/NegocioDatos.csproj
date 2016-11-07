@@ -44,7 +44,7 @@
     <Compile Include="GestorChoferes.cs" />
     <Compile Include="GestorCiudades.cs" />
     <Compile Include="GestorClientes.cs" />
-    <Compile Include="GestorCobros.cs" />
+    <Compile Include="GestorTipoCobros.cs" />
     <Compile Include="GestorConexion.cs" />
     <Compile Include="GestorInformeCobros.cs" />
     <Compile Include="GestorInformeViajes.cs" />

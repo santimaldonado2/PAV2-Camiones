@@ -18,22 +18,40 @@ namespace NegocioDatos
             SqlConnection cn = GestorConexion.abrirConexion();
             SqlTransaction tran = cn.BeginTransaction();
 
-
-            //VER SENTENCIA SQL POR EL TEMA DE LA FECHA, COBROS Y DEMAS
+            DateTime inicio = Convert.ToDateTime("01/01/1990");
+            DateTime fin = DateTime.Today;
 
             String commandText = @"SELECT	cl.nombreCliente,
-                                            co.montoCobro,
+                                            co.montoTotal,
+                                            co.idCobro,
                                             co.fechaCobro,
-                                            co.tipoCobro
-                                    FROM    Cobro co,
-		                                    Cliente cl
-                                    WHERE   co.idCliente = cl.idCliente";
+                                            t.nombreTipoCobro
+                                    FROM    Cobro co, 
+                                            Cliente cl,
+                                            TipoCobro t
+                                    WHERE   co.idCliente = cl.idCliente
+                                    AND     co.idTipoCobro = t.idTipoCobro";
 
             try
             {
                 if (idCliente != -1)
                 {
-                    commandText += "AND co.idCliente = @idCliente ";
+                    commandText += " AND co.idCliente = @idCliente ";
+                }
+
+                if (idCobro != -1)
+                {
+                    commandText += " AND co.idCobro = @idCobro ";
+                }
+
+                if (fechaMin != inicio)
+                {
+                    commandText += " AND co.fechaCobro BETWEEN @inicio AND @fin ";
+                }
+
+                if (fechaMax != fin)
+                {
+                    commandText += " AND co.fechaCobro BETWEEN @inicio AND @fin ";
                 }
 
 
@@ -44,20 +62,40 @@ namespace NegocioDatos
                     cmd.Parameters.AddWithValue("@idCliente", idCliente);
                 }
 
+                if (idCobro != -1)
+                {
+                    cmd.Parameters.AddWithValue("@idCobro", idCobro);
+                }
+
+                if (fechaMin != inicio)
+                {
+                    inicio = fechaMin;
+                    cmd.Parameters.AddWithValue("@inicio", inicio);
+                }
+
+                if (fechaMax != fin)
+                {
+                    fin = fechaMax;
+                    cmd.Parameters.AddWithValue("@fin", fin);
+                }
+
                 cmd.Transaction = tran;
-                //cmd.Parameters.AddWithValue("@patente", "%" + patente + "%");
+
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     DTEInformeCobros DTEInformeCobros = new DTEInformeCobros();
-                    DTEInformeCobros.montoCobro = float.Parse(dr["montoCobro"].ToString());
+
                     DTEInformeCobros.idCobro = (int)dr["idCobro"];
                     DTEInformeCobros.nombreCliente = dr["nombreCliente"].ToString();
-
-                    //Hacer lo de fecha de cobro aca
-                    //DTEInformeCobros.numeroCamion = Int32.Parse(dr["nroVehiculo"].ToString());
+                    DTEInformeCobros.montoCobro = float.Parse(dr["montoTotal"].ToString());
+                    DTEInformeCobros.fechaCobro = (DateTime)dr["fechaCobro"];
+                    DTEInformeCobros.tipoCobro = dr["nombreTipoCobro"].ToString();
+                 
                     lista.AddLast(DTEInformeCobros);
+                                                            
                 }
+
                 dr.Close();
                 return lista;
             }

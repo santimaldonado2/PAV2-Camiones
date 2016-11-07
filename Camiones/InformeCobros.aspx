@@ -21,11 +21,11 @@
                             <!-- form group [search] -->
                             <div class="form-group">
                                 <asp:Label ID="lblFechaMin" for="Fecha" class="filter-col" Style="margin-right: 0;" runat="server" Text="Desde"></asp:Label>
-                                <asp:TextBox ID="FechaMin" min="1" class="form-control number" runat="server"></asp:TextBox>
+                                 <asp:TextBox ID="FechaMin" min="1" class="form-control datepicker" runat="server"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="lblFechaMax" for="Fecha" class="filter-col" Style="margin-right: 0;" runat="server" Text="Hasta"></asp:Label>
-                                <asp:TextBox ID="FechaMax" min="1" class="form-control number" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="FechaMax" min="1" class="form-control datepicker" runat="server"></asp:TextBox>
                             </div>
                             <!-- form group [order by] -->
                             <div class="form-group">
@@ -45,10 +45,12 @@
         <div class="table" id="divGrilla" align="center" runat="server">
             <asp:GridView ID="GrillaCobros" runat="server" AutoGenerateColumns="False">
                 <Columns>
+                    <asp:BoundField HeaderText="Id Cobro" />
                     <asp:BoundField DataField="nombreCliente" HeaderText="Cliente" />
-                    <asp:BoundField DataField="tipoCobro" HeaderText="Tipo de Cobro" />
                     <asp:BoundField DataField="montoCobro" HeaderText="Monto" />
                     <asp:BoundField DataField="fechaCobro" HeaderText="Fecha" />
+
+                    <asp:BoundField DataField="tipoCobro" HeaderText="Tipo de Cobro" />
 
                 </Columns>
             </asp:GridView>
