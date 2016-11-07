@@ -18,11 +18,11 @@ namespace NegocioDatos
             string mensaje="";
             try
             {
-                SqlCommand cmd = GestorConexion.iniciarComando(cn, @"INSERT INTO Viaje (idChofer,idViaje)
-                                                                     VALUES(@idChofer,@idViaje); SELECT @@IDENTITY");
+                SqlCommand cmd = GestorConexion.iniciarComando(cn, @"INSERT INTO Viaje (idChofer,idCamion)
+                                                                     VALUES(@idChofer,@idCamion); SELECT @@IDENTITY");
 
                 cmd.Parameters.AddWithValue("@idChofer", viaje.Chofer.IdChofer);
-                cmd.Parameters.AddWithValue("@idViaje", viaje.IdViaje);
+                cmd.Parameters.AddWithValue("@idCamion", viaje.Camion.IdCamion);
                 cmd.Transaction = tran;
                 viaje.IdViaje = Convert.ToInt32(cmd.ExecuteScalar());
                 

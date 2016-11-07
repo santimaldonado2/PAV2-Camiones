@@ -64,6 +64,7 @@ namespace Camiones
                 cliente.NombreCliente = NombreCliente.Text;
                 cliente.ClienteFijo = ClienteFijo.Checked;
                 cliente.FechaInscripcion = DateTime.ParseExact(FechaInscripcion.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+               // cliente.FechaInscripcion = DateTime.ParseExact(FechaInscripcion.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
                 cliente.NroCuit = Int32.Parse(NroCuit.Text);
                 ciudad.IdCiudad = Int32.Parse(SelectCiudad.SelectedValue);
                 cliente.Ciudad = ciudad;
@@ -102,11 +103,13 @@ namespace Camiones
                 return false;
             }
             var col = Regex.Matches(FechaInscripcion.Text, "^(((((0[1-9])|(1\\d)|(2[0-8]))\\/((0[1-9])|(1[0-2])))|((31\\/((0[13578])|(1[02])))|((29|30)\\/((0[1,3-9])|(1[0-2])))))\\/((20[0-9][0-9])|(19[0-9][0-9])))|((29\\/02\\/(19|20)(([02468][048])|([13579][26]))))$");
+
+            //var col = Regex.Matches(FechaInscripcion.Text, "^(((((0[1-9])|(1\\d)|(2[0-8]))\\/((0[1-9])|(1[0-2])))|((31\\/((0[13578])|(1[02])))|((29|30)\\/((0[1,3-9])|(1[0-2])))))\\/((20[0-9][0-9])|(19[0-9][0-9])))|((29\\/02\\/(19|20)(([02468][048])|([13579][26]))))$");
             if (col.Count == 0)
                 return false;
             else
             {
-                if (DateTime.Parse(FechaInscripcion.Text) >= DateTime.Today)
+                if (DateTime.Parse(FechaInscripcion.Text) > DateTime.Today)
                     return false;
             }
 
@@ -146,6 +149,7 @@ namespace Camiones
             panel_grilla.Visible = false;
             titulo.InnerText = "Modificar Cliente";
             Eliminar.Visible = true;
+            Mensaje.InnerText = "";
         }
 
 
@@ -186,7 +190,8 @@ namespace Camiones
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Home.aspx");
+            panel_grilla.Visible = true;
+            formulario.Visible = false;
 
         }
     }

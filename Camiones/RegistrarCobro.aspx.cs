@@ -22,7 +22,7 @@ namespace Camiones
             //En este caso es 100 (Administrador)
             if (!GestorSeguridad.TienePermisos((Usuario)Session["user"], permisoMinimoPagina))
             {
-                Session["Pagina"] = "RegistrarViaje.aspx";
+                Session["Pagina"] = "RegistrarCobro.aspx";
                 Response.Redirect("Login.aspx");
             }
 
@@ -64,7 +64,8 @@ namespace Camiones
                     
             dteDetalleCobro.nombreCliente = SelectCliente.SelectedItem.Text;
             dteDetalleCobro.tipoCobro = SelectTipoCobro.SelectedItem.Text;
-            dteDetalleCobro.fechaCobro = Convert.ToDateTime(FechaCobro.Text);
+           // dteDetalleCobro.fechaCobro = Convert.ToDateTime(FechaCobro.Text);
+            dteDetalleCobro.fechaCobro = DateTime.ParseExact(FechaCobro.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
             dteDetalleCobro.fechaSalida = dv.FechaSalida;
             dteDetalleCobro.fechaLlegada = dv.FechaLlegada;
             dteDetalleCobro.kilogramos = dv.Kilogramos;
@@ -95,11 +96,13 @@ namespace Camiones
             cobro.idCliente = Convert.ToInt32(SelectCliente.SelectedValue);
             cobro.idTipoCobro = Convert.ToInt32(SelectTipoCobro.SelectedValue);
             cobro.montoTotal = Convert.ToDouble(txtMontoTotal.Text);
+            // cobro.fechaCobro = Convert.ToDateTime(FechaCobro.Text);
+            cobro.fechaCobro = DateTime.ParseExact(FechaCobro.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
 
             GestorCobros.RegistrarCobro(cobro, detalles);
 
 
-            Response.Redirect("InformeViajes.aspx");
+            Response.Redirect("InformeCobros.aspx");
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)

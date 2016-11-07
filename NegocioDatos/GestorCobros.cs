@@ -34,7 +34,7 @@ namespace NegocioDatos
                 cmd.Parameters.AddWithValue("@fechaCobro", cobro.fechaCobro);
                 cmd.Parameters.AddWithValue("@idCliente", cobro.idCliente);
                 cmd.Parameters.AddWithValue("@montoTotal", montoTotalDeCobros);
-                cmd.Parameters.AddWithValue("@idTipoCobro", cobro.idCobro);
+                cmd.Parameters.AddWithValue("@idTipoCobro", cobro.idTipoCobro);
 
                 cmd.Transaction = tran;
                 cobro.idCobro = Convert.ToInt32(cmd.ExecuteScalar());

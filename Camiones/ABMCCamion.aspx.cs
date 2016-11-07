@@ -159,7 +159,7 @@ namespace Camiones
                 return false;
             else
             {
-                if (DateTime.Parse(FechaCompra.Text) >= DateTime.Today)
+                if (DateTime.Parse(FechaCompra.Text) > DateTime.Today)
                     return false;
             }
 

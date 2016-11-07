@@ -95,12 +95,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ABMCChofer.aspx" />
+    <Content Include="ABMCCliente.aspx" />
     <Content Include="camion.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="InformeCobros.aspx" />
     <Content Include="InformePagos.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -118,6 +120,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="InformeViajes.aspx" />
+    <Content Include="RegistrarCobro.aspx" />
     <Content Include="RegistroPago.aspx" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -161,12 +164,26 @@
     <Compile Include="ABMCChofer.aspx.designer.cs">
       <DependentUpon>ABMCChofer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ABMCCliente.aspx.cs">
+      <DependentUpon>ABMCCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABMCCliente.aspx.designer.cs">
+      <DependentUpon>ABMCCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Camiones.Master.cs">
       <DependentUpon>Camiones.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Camiones.Master.designer.cs">
       <DependentUpon>Camiones.Master</DependentUpon>
+    </Compile>
+    <Compile Include="InformeCobros.aspx.cs">
+      <DependentUpon>InformeCobros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InformeCobros.aspx.designer.cs">
+      <DependentUpon>InformeCobros.aspx</DependentUpon>
     </Compile>
     <Compile Include="InformePagos.aspx.cs">
       <DependentUpon>InformePagos.aspx</DependentUpon>
@@ -196,6 +213,13 @@
     </Compile>
     <Compile Include="InformeViajes.aspx.designer.cs">
       <DependentUpon>InformeViajes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarCobro.aspx.cs">
+      <DependentUpon>RegistrarCobro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarCobro.aspx.designer.cs">
+      <DependentUpon>RegistrarCobro.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistrarViaje.aspx.cs">
       <DependentUpon>RegistrarViaje.aspx</DependentUpon>

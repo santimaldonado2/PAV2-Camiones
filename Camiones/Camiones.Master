@@ -19,10 +19,15 @@
         <a class="navbar-brand" runat="server" href="~/ABMCChofer.aspx">ABMC Chofer</a>
         <a class="navbar-brand" runat="server" href="~/InformePagos.aspx">Informe pagos</a>
         <a class="navbar-brand" runat="server" href="~/RegistroPago.aspx">Registrar Pago</a>
+        <a class="navbar-brand" runat="server" href="~/ABMCCliente.aspx">ABMC Cliente</a>
+        <a class="navbar-brand" runat="server" href="~/InformeCobros.aspx">Informe Cobros</a>
+        <a class="navbar-brand" runat="server" href="~/RegistrarCobro.aspx">Registrar Cobro</a>
+
 
         <!-- Menu -->
         <div class="navbar-collapse collapse" id="navbar">
             <ul class="nav navbar-nav">
+   
             </ul>
         </div>
     </nav>
@@ -96,7 +101,7 @@
     </style>
 
     <script src="scripts/jquery-3.1.1.min.js"></script>
-    <script src="scripts/jquery-ui.js"></script>    
+    <script src="scripts/jquery-ui.js"></script>
     <script src="scripts/bootstrap.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
     <link href="Content/bootstrap-theme.css" rel="stylesheet" />
