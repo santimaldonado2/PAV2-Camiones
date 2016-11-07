@@ -116,6 +116,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="InformeViajes.aspx" />
+    <Content Include="RegistrarCobro.aspx" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\datepicker.js" />
@@ -191,6 +192,13 @@
     </Compile>
     <Compile Include="ABMCCliente.aspx.designer.cs">
       <DependentUpon>ABMCCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarCobro.aspx.cs">
+      <DependentUpon>RegistrarCobro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarCobro.aspx.designer.cs">
+      <DependentUpon>RegistrarCobro.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

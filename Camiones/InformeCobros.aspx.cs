@@ -70,7 +70,7 @@ namespace Camiones
 
             if (FechaMin.Text != "")
             {
-                fechaMin = DateTime.ParseExact(FechaMin.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                fechaMin = DateTime.ParseExact(FechaMin.Text, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture);
             }
             else
             {
@@ -79,7 +79,7 @@ namespace Camiones
 
             if (FechaMax.Text != "")
             {
-                fechaMax = DateTime.ParseExact(FechaMax.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                fechaMax = DateTime.ParseExact(FechaMax.Text, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture);
             }
             else
             {

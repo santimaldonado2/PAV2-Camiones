@@ -63,7 +63,7 @@ namespace Camiones
                 Ciudad ciudad = new Ciudad();
                 cliente.NombreCliente = NombreCliente.Text;
                 cliente.ClienteFijo = ClienteFijo.Checked;
-                cliente.FechaInscripcion = DateTime.ParseExact(FechaInscripcion.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                cliente.FechaInscripcion = DateTime.ParseExact(FechaInscripcion.Text, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture);
                 cliente.NroCuit = Int32.Parse(NroCuit.Text);
                 ciudad.IdCiudad = Int32.Parse(SelectCiudad.SelectedValue);
                 cliente.Ciudad = ciudad;

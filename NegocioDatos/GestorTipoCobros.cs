@@ -27,7 +27,7 @@ namespace NegocioDatos
                 {
                     TipoCobro tipoCobro = new TipoCobro();
                     tipoCobro.idTipoCobro = (int)dr["idTipoCobro"];
-                   tipoCobro.nombreTipoCobro = dr["noombreTipoCobro"].ToString();
+                   tipoCobro.nombreTipoCobro = dr["nombreTipoCobro"].ToString();
 
                     lista.AddLast(tipoCobro);
                 }

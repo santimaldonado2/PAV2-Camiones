@@ -45,7 +45,6 @@
         <div class="table" id="divGrilla" align="center" runat="server">
             <asp:GridView ID="GrillaCobros" runat="server" AutoGenerateColumns="False">
                 <Columns>
-                    <asp:BoundField HeaderText="Id Cobro" />
                     <asp:BoundField DataField="nombreCliente" HeaderText="Cliente" />
                     <asp:BoundField DataField="montoCobro" HeaderText="Monto" />
                     <asp:BoundField DataField="fechaCobro" HeaderText="Fecha" />

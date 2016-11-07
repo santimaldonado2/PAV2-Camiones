@@ -12,7 +12,7 @@ namespace Entidades
         public DateTime fechaCobro { get; set; }
         public int idCliente { get; set; }
         public double montoTotal { get; set; }
-        public string tipoCobro { get; set; }
+        public int idTipoCobro { get; set; }
 
 
     }

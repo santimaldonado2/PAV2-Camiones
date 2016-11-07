@@ -45,13 +45,16 @@
     <Compile Include="Ciudad.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Cobro.cs" />
+    <Compile Include="DetalleCobro.cs" />
+    <Compile Include="DetalleViajeParaGrilla.cs" />
+    <Compile Include="DTEDetalleCobro.cs" />
     <Compile Include="DTEInformeCobros.cs" />
     <Compile Include="DTEInformeViajes.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoCobro.cs" />
-    <Compile Include="Usuario - Copia.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="Viaje.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
