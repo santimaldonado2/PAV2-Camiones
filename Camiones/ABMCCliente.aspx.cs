@@ -32,7 +32,11 @@ namespace Camiones
                 SelectCiudad.DataTextField = "NombreCiudad";
                 SelectCiudad.DataBind();
 
-                FechaInscripcionCompareValidator.ValueToCompare = string.Format("{0:dd/MM/yyyy}", DateTime.Today.ToShortDateString());
+                string aaaa = DateTime.Today.ToShortDateString();
+
+                FechaInscripcionCompareValidator.ValueToCompare = string.Format("{0:MM/dd/yyyy}", DateTime.Today.ToShortDateString());
+
+
 
                 CargarGrillaClientes();
                 formulario.Visible = false;

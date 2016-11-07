@@ -42,7 +42,7 @@
                     <asp:TextBox ID="FechaInscripcion" class="form-control datepicker" runat="server"></asp:TextBox>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidatorFecha" ForeColor="Red" runat="server" ControlToValidate="FechaInscripcion" EnableTheming="True" ErrorMessage="Ingrese una fecha válida con el formato DD/MM/YYYY" SetFocusOnError="False" ValidationExpression="^(((((0[1-9])|(1\d)|(2[0-8]))\/((0[1-9])|(1[0-2])))|((31\/((0[13578])|(1[02])))|((29|30)\/((0[1,3-9])|(1[0-2])))))\/((20[0-9][0-9])|(19[0-9][0-9])))|((29\/02\/(19|20)(([02468][048])|([13579][26]))))$ "></asp:RegularExpressionValidator>
                     <asp:CompareValidator ID="FechaInscripcionCompareValidator" ForeColor="Red" runat="server" Operator="LessThanEqual" ErrorMessage="La fecha de inscripción debe ser menor al día de la fecha"
-                        ControlToValidate="FechaInscripcion" Type="Date" />
+                        ControlToValidate="FechaInscripcion" Type="Date"/>
                 </div>
                 
                 <div class="row col-md-12 form-group">
