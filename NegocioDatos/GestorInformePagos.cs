@@ -12,8 +12,9 @@ namespace NegocioDatos
     {
         public static LinkedList<DTEInformePagos> buscarPagos(int chofer_id, double montoMin, double montoMax, DateTime fecha_min, DateTime fecha_max)
         {
-            DateTime fechaMinLocal = DateTime.Parse("01/01/2000");
-            DateTime fechaMaxLocal = DateTime.Parse("01/01/2000");
+
+            DateTime fechaLocal = DateTime.ParseExact("01/01/1000", "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            fechaLocal = DateTime.Parse("01/01/1000");
 
             LinkedList<DTEInformePagos> lista = new LinkedList<DTEInformePagos>();
             SqlConnection cn = GestorConexion.abrirConexion();
@@ -41,9 +42,9 @@ namespace NegocioDatos
                 {
                     commandText += " AND p.montoTotal < @montoMax";
                 }
-                if (fecha_min != fechaMinLocal && fecha_max != fechaMaxLocal)
+                if (fecha_min != fechaLocal && fecha_max != fechaLocal)
                 {
-                    commandText += " AND p.fechaPago between '" + fecha_min + "' AND '" + fecha_max + "'";
+                    commandText += " AND p.fechaPago BETWEEN @fecha_min AND @fecha_max";
                 }
 
                 commandText += @" GROUP BY p.idPago,c.nroDoc,c.nombreChofer,p.montoTotal,p.fechaPago 
@@ -64,11 +65,15 @@ namespace NegocioDatos
                 {
                     cmd.Parameters.AddWithValue("@montoMax", montoMax);
                 }
-                /*
-                if (fecha_min != "01/01/1000")
+                
+                if (fecha_min != fechaLocal)
                 {
                     cmd.Parameters.AddWithValue("@fecha_min", fecha_min);
-                }*/
+                }
+                if (fecha_max != fechaLocal)
+                {
+                    cmd.Parameters.AddWithValue("@fecha_max", fecha_max);
+                }
 
 
                 cmd.Transaction = tran;

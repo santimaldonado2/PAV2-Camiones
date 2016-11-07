@@ -78,7 +78,7 @@ namespace NegocioDatos
             return mensaje;
         }
 
-        public static LinkedList<Viaje> listarViajes()
+        public static LinkedList<Viaje> listarViajes(int id_chofer)
         {
             LinkedList<Viaje> lista = new LinkedList<Viaje>();
             SqlConnection cn = GestorConexion.abrirConexion();
@@ -88,7 +88,11 @@ namespace NegocioDatos
                 SqlCommand cmd = GestorConexion.iniciarComando(cn, @"SELECT v.idViaje,
                                                                             v.idChofer,
                                                                             v.idCamion
-                                                                      FROM  Viaje v");
+                                                                      FROM  Viaje v
+                                                                      WHERE v.idChofer=@id_chofer");
+                if (id_chofer!= -1){
+                    cmd.Parameters.AddWithValue("@id_chofer", id_chofer);
+                }
                 cmd.Transaction = tran;
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())

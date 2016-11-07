@@ -152,5 +152,12 @@ namespace Camiones
             Eliminar.Visible = false;
             titulo.InnerText = "Nuevo Chofer";
         }
+
+        protected void Cancelar_click(object sender, EventArgs e)
+        {
+            formulario.Visible = false;
+            panel_grilla.Visible = true;
+            LimpiarCampos();
+        }
     }
 }

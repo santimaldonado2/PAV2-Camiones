@@ -16,7 +16,7 @@
                 
                 <div class="row col-md-12 form-group">
                     <label for="SelectChofer">Chofer</label>
-                    <asp:DropDownList ID="SelectChofer" class="form-control" runat="server">
+                    <asp:DropDownList ID="SelectChofer" class="form-control" AutoPostBack="true" runat="server">
                     </asp:DropDownList>
                 </div>
                 <div class="row col-md-12 form-group">

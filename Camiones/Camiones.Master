@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>ABMC Camion</title>
+    <title>Camiones</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -16,6 +16,10 @@
         <a class="navbar-brand" runat="server" href="~/ABMCCamion.aspx">ABMC Camion</a>
         <a class="navbar-brand" runat="server" href="~/InformeViajes.aspx">Informe Viajes</a>
         <a class="navbar-brand" runat="server" href="~/RegistrarViaje.aspx">RegistrarViaje</a>
+        <a class="navbar-brand" runat="server" href="~/ABMCChofer.aspx">ABMC Chofer</a>
+        <a class="navbar-brand" runat="server" href="~/InformePagos.aspx">Informe pagos</a>
+        <a class="navbar-brand" runat="server" href="~/RegistroPago.aspx">Registrar Pago</a>
+
         <!-- Menu -->
         <div class="navbar-collapse collapse" id="navbar">
             <ul class="nav navbar-nav">

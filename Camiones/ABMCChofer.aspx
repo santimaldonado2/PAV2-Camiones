@@ -47,11 +47,13 @@
                 </div>
             </div>
 
+             <asp:Button ID="Cancelar" class="btn btn-default abreDialog" OnClientClick="openDialog()" CausesValidation="false" runat="server" Text="Cancelar" OnClick="Cancelar_click"/>
+
             <asp:Button ID="Guardar" class="btn btn-info" CausesValidation="true" runat="server" Text="Guardar" OnClick="Guardar_Click" />
-            <asp:Button ID="Eliminar" class="btn  btn-danger" CausesValidation="false" runat="server" Text="Eliminar" OnClick="Eliminar_Click" />
+            <asp:Button ID="Eliminar" class="btn  btn-danger" OnClientClick="return confirm('Está seguro que desea eliminar el registro?');" CausesValidation="false" runat="server" Text="Eliminar" OnClick="Eliminar_Click" />
             <asp:Label ID="Mensaje" runat="server" Text=""></asp:Label>
             </div>
-
+        <br />
             <div class="panel panel-default" id="panel_grilla" runat="server">
         <div class="panel-body text-center">
             <div class="form-inline">
