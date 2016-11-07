@@ -17,16 +17,16 @@ namespace Camiones
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //int permisoMinimoPagina = 100;
-            ////Verifica si el usuario logeado tiene permisos suficiente parala pagina
-            ////En este caso es 100 (Administrador)
-            //if (!GestorSeguridad.TienePermisos((Usuario)Session["user"], permisoMinimoPagina))
-            //{
-            //    Session["Pagina"] = "RegistrarViaje.aspx";
-            //    Response.Redirect("Login.aspx");
-            //}
+            int permisoMinimoPagina = 100;
+            //Verifica si el usuario logeado tiene permisos suficiente parala pagina
+            //En este caso es 100 (Administrador)
+            if (!GestorSeguridad.TienePermisos((Usuario)Session["user"], permisoMinimoPagina))
+            {
+                Session["Pagina"] = "RegistrarViaje.aspx";
+                Response.Redirect("Login.aspx");
+            }
 
-            
+
             if (!IsPostBack)
             {
                 SelectCamion.DataSource = GestorCamiones.listarCamiones();
