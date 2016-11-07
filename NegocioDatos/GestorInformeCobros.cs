@@ -110,26 +110,5 @@ namespace NegocioDatos
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
