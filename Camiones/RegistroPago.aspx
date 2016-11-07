@@ -23,6 +23,7 @@
                     <label for="FechaPago">Fecha de Pago</label>
                     <asp:TextBox ID="FechaPago" class="form-control datepicker" runat="server"></asp:TextBox>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidatorFecha" ForeColor="Red" runat="server" ControlToValidate="FechaPago" EnableTheming="True" ErrorMessage="Ingrese una fecha válida con el formato DD/MM/YYYY" SetFocusOnError="False" ValidationExpression="^(((((0[1-9])|(1\d)|(2[0-8]))\/((0[1-9])|(1[0-2])))|((31\/((0[13578])|(1[02])))|((29|30)\/((0[1,3-9])|(1[0-2])))))\/((20[0-9][0-9])|(19[0-9][0-9])))|((29\/02\/(19|20)(([02468][048])|([13579][26]))))$ "></asp:RegularExpressionValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorFecha" ForeColor="Red" runat="server" ControlToValidate="FechaPago" EnableTheming="True" ErrorMessage="Ingrese una fecha" SetFocusOnError="False" ></asp:RequiredFieldValidator>
                 </div>
                 <div class="row form-group col-md-12">
                     <label for="MontoTotal">Monto total</label>
@@ -41,6 +42,7 @@
                 <div class="row form-group col-md-12">
                     <label for="Monto">Monto</label>
                     <asp:TextBox ID="Monto" name="Monto" class="form-control" runat="server" MaxLength="10"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorMonto" ForeColor="Red" runat="server" ControlToValidate="Monto" EnableTheming="True" ErrorMessage="Ingrese un monto a pagar" SetFocusOnError="False" ></asp:RequiredFieldValidator>
                 </div>
                     <div class="row form-group col-md-12">
                     <label for="DescuentoAdelanto">Descuento Adelanto</label>

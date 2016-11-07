@@ -148,6 +148,7 @@ namespace NegocioDatos
                     Chofer.Activo = Boolean.Parse(dr["activo"].ToString());
                     Chofer.FechaNac = (DateTime)dr["fechaNac"];
                     Chofer.NroDoc = Int32.Parse(dr["nroDoc"].ToString());
+                    Chofer.Ciudad = ciudad;
                     lista.AddLast(Chofer);
                 }
                 dr.Close();

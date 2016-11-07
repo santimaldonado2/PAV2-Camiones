@@ -47,12 +47,21 @@
     </div>
     <div class="panel panel-default" id="panel_grilla" runat="server">
         <div class="table" id="divGrilla" align="center" runat="server">
-            <asp:GridView ID="GrillaPagos" runat="server" AutoGenerateColumns="False">
+            <asp:GridView ID="GrillaPagos" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
                 <Columns>
                     <asp:BoundField DataField="nombreChofer" HeaderText="Chofer" />
                     <asp:BoundField DataField="montoTotal" HeaderText="Monto" />
                     <asp:BoundField DataField="fechaPago" HeaderText="Fecha Pago" />
                 </Columns>
+                <FooterStyle BackColor="#CCCCCC" />
+                <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+                <RowStyle BackColor="White" />
+                <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#808080" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
         </div>
     </div>

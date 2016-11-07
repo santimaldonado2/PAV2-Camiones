@@ -31,11 +31,12 @@
                     <asp:RegularExpressionValidator ID="RegularExpressionValidatorFecha" ForeColor="Red" runat="server" ControlToValidate="FechaNac" EnableTheming="True" ErrorMessage="Ingrese una fecha válida con el formato DD/MM/YYYY" SetFocusOnError="False" ValidationExpression="^(((((0[1-9])|(1\d)|(2[0-8]))\/((0[1-9])|(1[0-2])))|((31\/((0[13578])|(1[02])))|((29|30)\/((0[1,3-9])|(1[0-2])))))\/((20[0-9][0-9])|(19[0-9][0-9])))|((29\/02\/(19|20)(([02468][048])|([13579][26]))))$ "></asp:RegularExpressionValidator>
                     <asp:CompareValidator ID="FechaNacCompareValidator" ForeColor="Red" runat="server" Operator="LessThanEqual" ErrorMessage="La fecha de nacimiento debe ser menor al dia de la fecha"
                         ControlToValidate="FechaNac" Type="Date" />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorFechaNac" ForeColor="Red" runat="server" ControlToValidate="FechaNac" EnableTheming="True" ErrorMessage="Ingrese una fecha" SetFocusOnError="False" ></asp:RequiredFieldValidator>
                 </div>
                 <div class="row col-md-12 form-group">
                     <label for="NroDoc">Número de Documento</label>
                     <asp:TextBox ID="NroDoc" class="form-control" runat="server"></asp:TextBox><br />
-
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorNroDoc" ForeColor="Red" runat="server" ControlToValidate="NroDoc" EnableTheming="True" ErrorMessage="Ingrese el nro de documento" SetFocusOnError="False" ></asp:RequiredFieldValidator>
                 </div>
                 <div class="row col-md-12 form-group">
                     <label for="SelectCiudad">Ciudad</label>

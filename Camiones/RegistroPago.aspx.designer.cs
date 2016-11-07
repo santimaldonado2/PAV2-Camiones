@@ -67,6 +67,15 @@ namespace Camiones {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidatorFecha;
         
         /// <summary>
+        /// Control RequiredFieldValidatorFecha.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorFecha;
+        
+        /// <summary>
         /// Control MontoTotal.
         /// </summary>
         /// <remarks>
@@ -101,6 +110,15 @@ namespace Camiones {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Monto;
+        
+        /// <summary>
+        /// Control RequiredFieldValidatorMonto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorMonto;
         
         /// <summary>
         /// Control DescuentoAdelanto.

@@ -94,6 +94,15 @@ namespace Camiones {
         protected global::System.Web.UI.WebControls.CompareValidator FechaNacCompareValidator;
         
         /// <summary>
+        /// Control RequiredFieldValidatorFechaNac.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorFechaNac;
+        
+        /// <summary>
         /// Control NroDoc.
         /// </summary>
         /// <remarks>
@@ -101,6 +110,15 @@ namespace Camiones {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox NroDoc;
+        
+        /// <summary>
+        /// Control RequiredFieldValidatorNroDoc.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorNroDoc;
         
         /// <summary>
         /// Control SelectCiudad.
